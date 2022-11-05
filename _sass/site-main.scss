@@ -102,17 +102,17 @@ hr {
 }
 
 .home-header > a {
-    grid-area: img;
-
-    display: block;
-    width: max-content;
-    height: 100%;
-    margin-left: auto;
+    display: contents;
 }
 
 .home-header > a > img {
+    grid-area: img;
+
+    display: block;
     height: 100%;
+    margin-left: auto;
     margin-top: -0.5rem;
+    margin-right: calc(var(--gutter-size) * -1);
     mix-blend-mode: luminosity;
     transition: transform 0.2s ease;
 }
