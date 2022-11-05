@@ -1,0 +1,47 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Technical Fluff
+description: A part-time dog's notes on software, design, ideas & (some) maths.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog.elttob.uk" # the base hostname & protocol for your site, e.g. http://example.com
+
+personal_name: "Elttob"
+personal_url: "https://elttob.uk"
+
+date_format: "%e %b %Y"
+
+default_thumbnails:
+  - "/assets/fallback/thumbnails/0.jpg"
+  - "/assets/fallback/thumbnails/1.jpg"
+  - "/assets/fallback/thumbnails/2.jpg"
+  - "/assets/fallback/thumbnails/3.jpg"
+  - "/assets/fallback/thumbnails/4.jpg"
+
+footer: >-
+  This is my personal blog. I don't speak for my employer. I don't write
+  sponsored posts. <a href="https://github.com/sponsors/Elttob">I accept
+  donations on GitHub.</a>
+copyright: MIT licensed unless specified; use with attribution, links are appreciated.
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

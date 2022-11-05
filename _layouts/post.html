@@ -1,0 +1,36 @@
+---
+layout: bare
+---
+<header class="post-header">
+  <nav class="post-nav">
+    <a href="{{ site.url }}">{{ site.title }}</a>
+    <a href="{{ page.url }}">Permalink</a>
+    {%- if page.comments_url -%}
+      <a href="{{ page.comments_url }}">Comments</a>
+    {%- endif -%}
+  </nav>
+  <h1>{{ page.title }}</h1>
+</header>
+
+<hr>
+
+<main>
+  <article>
+    {{ content }}
+  </article>
+  <p class="post-info">
+    Posted on <time datetime="{{ page.date }}">{{ page.date | date: site.date_format }}</time>
+  </p>
+</main>
+
+<hr>
+
+<nav class="post-nav">
+  <a href="{{ site.url }}">{{ site.title }}</a>
+  <a href="{{ page.url }}">Permalink</a>
+  {%- if page.comments_url -%}
+    <a href="{{ page.comments_url }}">Comments</a>
+  {%- endif -%}
+</nav>
+
+{%- include footer.html -%}
