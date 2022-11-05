@@ -68,9 +68,25 @@ body {
     gap: 2.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-weight: 600;
     font-family: $font-display;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1rem;
 }
 
 a {
@@ -86,6 +102,18 @@ hr {
     border: none;
     background-color: $grey-4;
     height: 1px;
+}
+
+sup {
+    vertical-align: inherit;
+    font-size: inherit;
+    font-feature-settings: "sups";
+}
+
+sub {
+    vertical-align: inherit;
+    font-size: inherit;
+    font-feature-settings: "subs";
 }
 
 /*
@@ -233,17 +261,43 @@ hr {
     Articles
 */
 
-article::after {
+article > * {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+article > *:first-child {
+    margin-top: 0;
+}
+
+article > h1, 
+article > h2,
+article > h3,
+article > h4 {
+    margin-top: 5rem;
+}
+
+article ul {
+    margin-left: 1rem;
+    list-style-type: square;
+}
+
+article ol {
+    margin-left: 1rem;
+}
+
+article li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+article > p:last-of-type::after {
     content: "";
     display: block;
     width: 1rem;
     height: 1rem;
     background-color: currentColor;
     margin-top: 2.5rem;
-}
-
-article p {
-    margin-bottom: 2.5rem;
 }
 
 article img {
@@ -274,11 +328,24 @@ article pre {
     }
 }
 
-article .highlight {
+article div.highlight {
     width: calc(100% + var(--gutter-size)*2);
     margin-left: calc(var(--gutter-size)*-1);
-    padding-bottom: 2.5rem;
     @include code-highlight-classes;
+}
+
+article blockquote {
+    padding-left: calc(var(--gutter-size) - 1rem);
+    border-left: 1rem solid $sub-fg;
+    font-style: italic;
+}
+
+article blockquote :first-child::before {
+    content: "“ ";
+}
+
+article blockquote :last-child::after {
+    content: " „";
 }
 
 /*
