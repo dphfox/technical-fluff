@@ -2,6 +2,7 @@
 layout: post
 title:  "So I have a blog now"
 thumbnail: "/assets/posts/so-i-have-a-blog-now/thumb.jpg"
+comments_url: "https://twitter.com/Elttob_/status/1588821355319164929"
 ---
 Twitter seems to be folding in on itself at the moment; might not be a good
 hedge to keep all my writings on there. [I do have a Medium page](https://elttob.medium.com/),
