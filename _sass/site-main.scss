@@ -122,6 +122,14 @@ hr {
     mix-blend-mode: normal;
 }
 
+.home-header > h1 {
+    grid-area: h1;
+}
+
+.home-header > h2 {
+    grid-area: h2;
+}
+
 /*
     Post header
 */
