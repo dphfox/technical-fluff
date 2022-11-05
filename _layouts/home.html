@@ -6,7 +6,7 @@ layout: bare
     <img src="/assets/home/headshot.png" alt="{{ site.personal_name }}">
   </a>
   <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+  <h2>{{ site.description }}</h2>
 </header>
 
 <hr>
@@ -19,10 +19,10 @@ layout: bare
         <a href="{{ post.url }}">
           <h2>{{ post.title }}</h2>
           <img src="{{ post.thumbnail | default: site.default_thumbnails[thumbnail_index] }}" alt="{{ post.title }}">
-          {%- if post.blurb -%}
-            <p class="-blurb">{{ post.blurb }}</p>
+          {%- if post.excerpt -%}
+            <p>{{ post.excerpt | strip_html }}</p>
           {%- endif -%}
-          <p class="-date">{{ post.date | date: site.date_format }}</p>
+          <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
         </a>
       </li>
     {%- endfor -%}

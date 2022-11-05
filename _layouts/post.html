@@ -18,12 +18,13 @@ layout: bare
   <article>
     {{ content }}
   </article>
-  <p class="post-info">
-    Posted on <time datetime="{{ page.date }}">{{ page.date | date: site.date_format }}</time>
-  </p>
 </main>
 
 <hr>
+
+<p class="post-info">
+  Posted on <time datetime="{{ page.date }}">{{ page.date | date: site.date_format }}</time>
+</p>
 
 <nav class="post-nav">
   <a href="{{ site.url }}">{{ site.title }}</a>
