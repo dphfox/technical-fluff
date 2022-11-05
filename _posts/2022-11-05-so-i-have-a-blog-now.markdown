@@ -15,7 +15,7 @@ blatantly neo-Nazi shit, of course; I just don't want to be the pawn in meeting
 room games of increasing shareholder profits year over year. So instead of going
 off to get some middle man to provide easy web software, I've used my own two
 hands to build a static Jekyll blog to my exact specification, and host it on
-GitHub.
+GitHub. [You can add this website to your RSS/Atom reader if you'd like.](/feed.xml)
 
 I like this. It's a quieter corner of the internet. By design, I've made this
 website feel clean and empty of stuff; no sidebars shouting at you with
