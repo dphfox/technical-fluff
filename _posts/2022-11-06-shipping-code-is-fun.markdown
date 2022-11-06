@@ -2,6 +2,7 @@
 layout: post
 title:  "Shipping code is fun"
 thumbnail: "/assets/posts/shipping-code-is-fun/thumb.jpg"
+comments_url: "https://twitter.com/Elttob_/status/1589046524616798208"
 ---
 Yesterday I brought this blog online for the first time. Today I've been filling
 in CSS holes, fixing bugs and bringing over an old post.
