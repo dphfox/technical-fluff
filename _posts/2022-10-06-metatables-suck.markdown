@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Metatables suck."
+thumbnail: "/assets/posts/metatables-suck/thumb.jpg"
 excerpt: "You might observe that I try pretty hard to avoid metatables in my own code. Here's every use case I've seen for metatables and why they all suck."
 ---
 
