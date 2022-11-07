@@ -335,16 +335,16 @@ article div.highlight {
 }
 
 article blockquote {
-    padding-left: calc(var(--gutter-size) - 1rem);
-    border-left: 1rem solid $sub-fg;
+    padding-left: calc(var(--gutter-size) - 0.5rem);
+    border-left: 0.5rem solid $sub-fg;
     font-style: italic;
 }
 
-article blockquote :first-child::before {
+article blockquote > :first-child::before {
     content: "“ ";
 }
 
-article blockquote :last-child::after {
+article blockquote > :last-child::after {
     content: " „";
 }
 
