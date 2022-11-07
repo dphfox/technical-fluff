@@ -150,7 +150,7 @@ SETS is a simple algorithm which allows for any directed acyclic graph of
 objects to be processed in topological order, while also allowing for irrelevant
 subgraphs to be eliminated from being processed. In plain English, that means it
 will make sure our objects are processed in the right order, while also allowing
-us to skip objects we don't need to process again.
+us to skip objects we don't need to process.
 
 The only things you need for SETS to work is:
 
@@ -228,7 +228,7 @@ local function sets_search(root, process)
 end
 ```
 
-As you can probably tell, this look similar to the toposort algorithm we had
+As you can probably tell, this looks similar to the toposort algorithm we had
 before. The thing that's new here is the *subgraph elimination* - it's ergonomic
 and efficient to skip over computations for parts of the graph you don't need,
 while preserving the order of the rest of your computations the same relative to
