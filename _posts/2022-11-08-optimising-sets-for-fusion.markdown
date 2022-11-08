@@ -76,7 +76,7 @@ local function updateAll(root: PubTypes.Dependency)
 	local counters = {}
 	local flags = {}
 	local queue = {}
-    local queuePos = 1
+	local queuePos = 1
 
 	-- Pass 1: counting up
 	for object in root.dependentSet do
