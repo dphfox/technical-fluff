@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Optimising SETS for Fusion"
-date: "2022-11-07 22:23:00"
 thumbnail: "/assets/posts/optimising-sets-for-fusion/thumb.jpg"
 comments_url: "https://twitter.com/Elttob_/status/1589998930187943938"
 ---
