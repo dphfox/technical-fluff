@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/ui-frameworks-dont-serve-designers/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://twitter.com/Elttob_/status/1590541434553192448"
 ---
 
 The pace of innovation in UI framework design has given an outsized advantage to
