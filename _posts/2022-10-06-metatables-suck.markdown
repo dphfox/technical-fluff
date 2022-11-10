@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "Metatables suck."
-thumbnail: "/assets/posts/metatables-suck/thumb.jpg"
+image:
+  path: "/assets/posts/metatables-suck/thumb.jpg"
+  width: 256
+  height: 256
 excerpt: "You might observe that I try pretty hard to avoid metatables in my own code. Here's every use case I've seen for metatables and why they all suck."
 ---
 

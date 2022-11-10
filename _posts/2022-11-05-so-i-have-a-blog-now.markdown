@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "So I have a blog now"
-thumbnail: "/assets/posts/so-i-have-a-blog-now/thumb.jpg"
+image:
+  path: "/assets/posts/so-i-have-a-blog-now/thumb.jpg"
+  width: 256
+  height: 256
 comments_url: "https://twitter.com/Elttob_/status/1588821355319164929"
 ---
 Twitter seems to be folding in on itself at the moment; might not be a good

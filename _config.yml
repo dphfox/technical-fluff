@@ -24,6 +24,10 @@ copyright: Text is MIT licensed unless specified; use with attribution, links ar
 sass:
   style: :compressed
 
+twitter:
+  username: Elttob_
+  card: summary
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

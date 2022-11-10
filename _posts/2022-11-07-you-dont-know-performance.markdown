@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "You don't know performance"
-thumbnail: "/assets/posts/you-dont-know-performance/thumb.jpg"
+image:
+  path: "/assets/posts/you-dont-know-performance/thumb.jpg"
+  width: 256
+  height: 256
 comments_url: "https://twitter.com/Elttob_/status/1589621608108666884"
 ---
 > When a measure becomes a target, it ceases to be a good measure.

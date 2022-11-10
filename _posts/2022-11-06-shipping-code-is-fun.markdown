@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "Shipping code is fun"
-thumbnail: "/assets/posts/shipping-code-is-fun/thumb.jpg"
+image:
+  path: "/assets/posts/shipping-code-is-fun/thumb.jpg"
+  width: 256
+  height: 256
 comments_url: "https://twitter.com/Elttob_/status/1589046524616798208"
 ---
 Yesterday I brought this blog online for the first time. Today I've been filling

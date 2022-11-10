@@ -2,7 +2,10 @@
 layout: post
 title:  "SETS: efficient topological search"
 date: "2022-11-07 22:23:00"
-thumbnail: "/assets/posts/sets-efficient-topological-search/thumb.jpg"
+image:
+  path: "/assets/posts/sets-efficient-topological-search/thumb.jpg"
+  width: 256
+  height: 256
 comments_url: "https://twitter.com/Elttob_/status/1589745906823593984"
 ---
 
