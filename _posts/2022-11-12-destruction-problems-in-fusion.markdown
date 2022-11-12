@@ -26,7 +26,7 @@ The problem is that we only run that destruction code when values are being
 *replaced*. When a state object falls out of scope and becomes completely
 inaccessible, though, we still don't destroy the value inside the state object.
 In fact, the entire object gets garbage collected with the live value still
-inside. For obvious reasons, this is a soundness issue; if we can't guarantee
+inside. For obvious reasons, this is a management issue; if we can't guarantee
 that your destructors will run, then the door is wide open for memory leaks.
 
 Raw, unsandboxed Lua 5.1 actually *does* have a way of supporting exactly this.
