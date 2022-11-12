@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/destruction-problems-in-fusion/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://twitter.com/Elttob_/status/1591318536223608832"
 ---
 
 Roblox made two frustrating API decisions that are actively hampering Fusion's
