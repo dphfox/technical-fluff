@@ -58,7 +58,7 @@ essentially just lobbing a destroy method in every state object and providing no
 extra API support at all. This would obviously change how you write components;
 take this button component, for example:
 
-```Lua
+```lua
 local function Button(props)
     local isHovering = Value(false)
     local isPressed = Value(false)
@@ -73,7 +73,7 @@ Perhaps the simplest pattern would be to store all your state objects in a
 table, and pass that table to a cleanup key. You could do this today if you
 wanted to:
 
-```Lua
+```lua
 local function Button(props)
     local state = {
         isHovering = Value(false)
@@ -98,7 +98,7 @@ tables, and no more nesting state objects inside of each other. That's of
 particular relevance for users of this common pattern of creating a computed
 value for the sole purpose of animating it:
 
-```Lua
+```lua
 local transparency = Spring(Computed(function()
     return if isHovering:get() then 0.5 else 1
 end), 25)
