@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/icon-colour-systems/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://twitter.com/Elttob_/status/1593719057160847361"
 ---
 
 Vanilla 3 did a lot of work on icon consistency. However, a remaining issue was
