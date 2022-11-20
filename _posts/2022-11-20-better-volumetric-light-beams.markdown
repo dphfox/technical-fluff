@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/better-volumetric-light-beams/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://twitter.com/Elttob_/status/1594274915959865344"
 ---
 
 Many Roblox games use a simple Beam texture to add volumetric light beams to
