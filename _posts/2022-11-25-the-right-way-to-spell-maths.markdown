@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/the-right-way-to-spell-maths/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://twitter.com/Elttob_/status/1596138869468332032"
 ---
 
 I'm not a linguist. I don't care. Someone's always going to call me out on this
