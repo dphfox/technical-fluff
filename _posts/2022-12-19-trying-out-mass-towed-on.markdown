@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/trying-out-mass-towed-on/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://tech.lgbt/@Elttob/109537678654159375"
 ---
 
 I don't like Musk, so in an act of self love, I'm gonna start peeling away from
