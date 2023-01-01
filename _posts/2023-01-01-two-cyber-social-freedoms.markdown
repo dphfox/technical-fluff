@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/two-cyber-social-freedoms/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://tech.lgbt/@Elttob/109613905132285920"
 ---
 
 There are two cyber-social freedoms: the freedom from platforms, and the freedom
