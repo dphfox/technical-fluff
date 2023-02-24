@@ -262,15 +262,15 @@ sub {
 */
 
 article > * {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 article > *:first-child {
     margin-top: 0;
 }
 
-article > h1, 
+article > h1,
 article > h2,
 article > h3,
 article > h4 {
@@ -314,6 +314,13 @@ article figure img {
     width: 100%;
     max-height: 20rem;
     object-fit: contain;
+}
+
+article iframe {
+    width: calc(100% + var(--gutter-size)*2);
+	height: auto;
+	aspect-ratio: 1.7778;
+    margin-left: calc(var(--gutter-size)*-1);
 }
 
 article pre,
