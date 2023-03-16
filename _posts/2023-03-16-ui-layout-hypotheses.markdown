@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/ui-layout-hypotheses/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://elk.zone/tech.lgbt/@Elttob/110030464471607938"
 ---
 
 Presented with wholly inadequate logical explanation - that is, none.
