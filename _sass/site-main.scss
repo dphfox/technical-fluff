@@ -291,7 +291,7 @@ article li {
     margin-bottom: 0.5rem;
 }
 
-article > p:last-of-type::after {
+article::after {
     content: "";
     display: block;
     width: 1rem;
