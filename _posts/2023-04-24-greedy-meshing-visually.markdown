@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/greedy-meshing-visually/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://elk.zone/tech.lgbt/@Elttob/110254765144551186"
 ---
 
 Greedy meshing blocks in a voxel game doesn't have to be hard. Here's a simple
