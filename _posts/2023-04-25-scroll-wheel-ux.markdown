@@ -38,6 +38,9 @@ is not physically accurate, and I hate it. Natural my ass.
 
 The only way you could defend that choice, in my mind, is if you were trying to
 emulate a touch surface using the scroll wheel - and yet, I still question that.
+I guess it could make sense if you wanted everyone to use the same finger
+gestures regardless of their hardware, but then what about when it doesn't
+make sense to emulate a touch surface? I don't know, I'm not convinced.
 
 Anyway, you've probably heard this discussion before. It's not the main focus of
 this post - the MX Master 3S does indeed scroll the correct way.
