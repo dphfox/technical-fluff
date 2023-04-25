@@ -68,3 +68,6 @@ only a detail-obsessed weirdo would spend half an hour penning a blog post about
 their specific theories about how scrolling would work.
 
 Wait - shit, it's been half an hour already?
+
+*UPDATE: Looks like the software has it the other way around. Logitech has the
+right default after all, and I have no idea what's going on with my computer.*
