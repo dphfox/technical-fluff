@@ -58,7 +58,7 @@ But when I tried it out, it felt shit. When compared to how a physical wheel
 would work, it scrolled in the *opposite* direction - it's natural scrolling all
 over again!
 
-![Diagram showing how the MX Master 3S compares to a physical wheel setup when scrolling perpendicular to the document surface.](/assets/posts/scroll-wheel-ux/mx-horizontal-scroll.svg)
+![Diagram showing how the above default compares to a physical wheel setup when scrolling perpendicular to the document surface.](/assets/posts/scroll-wheel-ux/mx-horizontal-scroll.svg)
 
 Needless to say, I switched that pretty quickly, and now the balance of the
 universe has been restored, or something like that.
