@@ -7,8 +7,9 @@ image:
   height: 256
 comments_url: "https://tech.lgbt/@Elttob/110260011660621528"
 ---
-Logitech's MX Master 3S has bad scrolling - and it's not just their weird clunky
-implementation of smooth scrolling that makes my Surface Precision Mouse weep.
+My Logitech MX Master 3S had bad scrolling - and it's not just their weird
+clunky implementation of smooth scrolling that makes my Surface Precision Mouse
+weep.
 
 ## Scroll wheels are not touchscreens (unless you're Apple)
 
@@ -38,12 +39,9 @@ is not physically accurate, and I hate it. Natural my ass.
 
 The only way you could defend that choice, in my mind, is if you were trying to
 emulate a touch surface using the scroll wheel - and yet, I still question that.
-I guess it could make sense if you wanted everyone to use the same finger
-gestures regardless of their hardware, but then what about when it doesn't
-make sense to emulate a touch surface? I don't know, I'm not convinced.
 
 Anyway, you've probably heard this discussion before. It's not the main focus of
-this post - the MX Master 3S does indeed scroll the correct way.
+this post - the MX Master 3S did indeed scroll the correct way.
 
 ## Where things go sideways
 
@@ -56,18 +54,19 @@ side buttons to switch the scroll wheel from vertical to horizontal scrolling.
 
 *This should be great.*
 
-But the default setting was shit. When compared to how a physical wheel would
-work, it scrolls in the *opposite* direction - it's natural scrolling all over
-again!
+But when I tried it out, it felt shit. When compared to how a physical wheel
+would work, it scrolled in the *opposite* direction - it's natural scrolling all
+over again!
 
 ![Diagram showing how the MX Master 3S compares to a physical wheel setup when scrolling perpendicular to the document surface.](/assets/posts/scroll-wheel-ux/mx-horizontal-scroll.svg)
 
 Needless to say, I switched that pretty quickly, and now the balance of the
 universe has been restored, or something like that.
 
-In fairness to Logitech, this was probably just an arbitrary decision made by an
+~~In fairness to Logitech, this was probably just an arbitrary decision made by an
 engineer somewhere, and literally nobody cared about this sort of detail because
 only a detail-obsessed weirdo would spend half an hour penning a blog post about
-their specific theories about how scrolling would work.
+their specific theories about how scrolling would work.~~
 
-Wait - shit, it's been half an hour already?
+UPDATE: Nope, I'm an idiot. The software has it the right way around. I don't
+know why it's inverted for me. I'll figure it out.
