@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/scroll-wheel-ux/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://tech.lgbt/@Elttob/110260011660621528"
 ---
 Logitech's MX Master 3S has bad scrolling - and it's not just their weird clunky
 implementation of smooth scrolling that makes my Surface Precision Mouse weep.
@@ -20,7 +21,7 @@ there are two ways you can push it up and down:
 - you could push it with your finger directly
 - you could put the document under a wheel, and spin the wheel
 
-![](/assets/posts/scroll-wheel-ux/scroll-methods.svg)
+![Diagrams illustrating wheel and direct scrolling.](/assets/posts/scroll-wheel-ux/scroll-methods.svg)
 
 These are the two primary 'modes' of scrolling. 'Direct' scrolling is best
 suited for flat surfaces like trackpads and touchscreens, while 'wheel'
@@ -45,7 +46,7 @@ this post - the MX Master 3S does indeed scroll the correct way.
 
 The MX Master 3S has a horizontal scroll wheel mounted on its side.
 
-![](/assets/posts/scroll-wheel-ux/mx-master.jpg)
+![A picture of the MX Master 3S's horizontal scroll wheel.](/assets/posts/scroll-wheel-ux/mx-master.jpg)
 
 I like this concept. On my previous Surface Precision Mouse, I mapped one of the
 side buttons to switch the scroll wheel from vertical to horizontal scrolling.
@@ -56,7 +57,7 @@ But the default setting was shit. When compared to how a physical wheel would
 work, it scrolls in the *opposite* direction - it's natural scrolling all over
 again!
 
-![](/assets/posts/scroll-wheel-ux/mx-horizontal-scroll.svg)
+![Diagram showing how the MX Master 3S compares to a physical wheel setup when scrolling perpendicular to the document surface.](/assets/posts/scroll-wheel-ux/mx-horizontal-scroll.svg)
 
 Needless to say, I switched that pretty quickly, and now the balance of the
 universe has been restored, or something like that.
