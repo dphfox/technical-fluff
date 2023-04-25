@@ -63,10 +63,9 @@ over again!
 Needless to say, I switched that pretty quickly, and now the balance of the
 universe has been restored, or something like that.
 
-~~In fairness to Logitech, this was probably just an arbitrary decision made by an
+In fairness to Logitech, this was probably just an arbitrary decision made by an
 engineer somewhere, and literally nobody cared about this sort of detail because
 only a detail-obsessed weirdo would spend half an hour penning a blog post about
-their specific theories about how scrolling would work.~~
+their specific theories about how scrolling would work.
 
-UPDATE: Nope, I'm an idiot. The software has it the right way around. I don't
-know why it's inverted for me. I'll figure it out.
+Wait, shit - it's been half an hour already?
