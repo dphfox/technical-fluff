@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/a-style-update/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://tech.lgbt/@Elttob/110351766314067387"
 ---
 I redesigned the homepage to make better use of vertical space. Also, there's a
 new warmer colour palette and some subtle details added.
