@@ -137,6 +137,13 @@ main > * + * {
 	}
 }
 
+@media screen and (max-width: 50rem) {
+    .home-header {
+		padding: 2rem;
+		padding-top: 0;
+	}
+}
+
 .home-header > a {
     display: contents;
 }
