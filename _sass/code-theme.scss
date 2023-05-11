@@ -5,6 +5,9 @@ $code-teal-fg: #23bcbc;
 $code-mint-fg: #23bc85;
 $code-green-fg: #2dad59;
 $code-yellow-fg: #cfac31;
+$code-gold-fg: #e79f34;
+$code-orange-fg: #f07731;
+$code-clay-fg: #ec5d39;
 $code-red-fg: #cf3131;
 $code-grey-fg: #8a8d8d;
 $code-lightgrey-fg: #aaadad;
@@ -16,6 +19,9 @@ $code-teal-bg: #23bcbc40;
 $code-mint-bg: #23bc8540;
 $code-green-bg: #2dad5940;
 $code-yellow-bg: #cfac3140;
+$code-gold-bg: #e79f3440;
+$code-orange-bg: #f0773140;
+$code-clay-bg: #ec5d3940;
 $code-red-bg: #cf313140;
 $code-grey-bg: #8a8d8d40;
 $code-lightgrey-bg: #aaadad40;
@@ -24,7 +30,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Comment
     .c {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Error
@@ -34,7 +40,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Keyword
     .k {
-        color: $code-teal-fg;
+        color: $code-orange-fg;
     }
 
     // Operator
@@ -44,22 +50,22 @@ $code-lightgrey-bg: #aaadad40;
 
     // Comment.Multiline
     .cm {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Comment.Preproc
     .cp {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Comment.Single
     .c1 {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Comment.Special
     .cs {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Generic.Deleted
@@ -98,13 +104,13 @@ $code-lightgrey-bg: #aaadad40;
 
     // Generic.Output
     .go {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Generic.Prompt
     .gp {
-        color: $code-grey-fg;
-        background-color: $code-grey-bg;
+        color: $code-lightgrey-fg;
+        background-color: $code-lightgrey-bg;
     }
 
     // Generic.Strong
@@ -113,7 +119,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Generic.Subheading
     .gu {
-        color: $code-grey-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Generic.Traceback
@@ -123,27 +129,27 @@ $code-lightgrey-bg: #aaadad40;
 
     // Keyword.Constant
     .kc {
-        color: $code-teal-fg;
+        color: $code-mint-fg;
     }
 
     // Keyword.Declaration
     .kd {
-        color: $code-teal-fg;
+        color: $code-gold-fg;
     }
 
     // Keyword.Pseudo
     .kp {
-        color: $code-teal-fg;
+        color: $code-gold-fg;
     }
 
     // Keyword.Reserved
     .kr {
-        color: $code-teal-fg;
+        color: $code-gold-fg;
     }
 
     // Keyword.Type
     .kt {
-        color: $code-blue-fg;
+        color: $code-clay-fg;
     }
 
     // Literal.Number
@@ -153,7 +159,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Literal.String
     .s {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Name.Attribute
@@ -162,7 +168,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Name.Builtin
     .nb {
-        color: $code-teal-fg;
+        color: $code-lightgrey-fg;
     }
 
     // Name.Class
@@ -199,7 +205,7 @@ $code-lightgrey-bg: #aaadad40;
 
     // Operator.Word
     .ow {
-        color: $code-lightgrey-fg;
+        color: $code-orange-fg;
     }
 
     // Text.Whitespace
@@ -229,58 +235,58 @@ $code-lightgrey-bg: #aaadad40;
 
     // Literal.String.Backtick
     .sb {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Char
     .sc {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Doc
     .sd {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Double
     .s2 {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Escape
     .se {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
         background-color: $code-cyan-bg;
     }
 
     // Literal.String.Heredoc
     .sh {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Interpol
     .si {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Other
     .sx {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Regex
     .sr {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Single
     .s1 {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Literal.String.Symbol
     .ss {
-        color: $code-cyan-fg;
+        color: $code-yellow-fg;
     }
 
     // Name.Builtin.Pseudo

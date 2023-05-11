@@ -1,0 +1,301 @@
+@import "site-common";
+
+$home-header-bg: $neutral-600;
+$home-header-fg: $neutral-200;
+
+:root {
+    --home-thumbnail-size: 8rem;
+}
+
+@media screen and (max-width: 50rem) {
+    :root {
+        --home-thumbnail-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    :root {
+        --home-thumbnail-size: 4rem;
+    }
+}
+
+:root {
+    --gutter-size: 2.5rem;
+}
+
+@media screen and (max-width: 50rem) {
+    :root {
+        --gutter-size: 1.25rem;
+    }
+}
+
+body {
+	display: grid;
+	--max-width: 100rem;
+	--clamped-width: min(100vw, var(--max-width));
+
+	--left-dead-space: ((100vw - var(--clamped-width) * 7 / 5) / 2);
+	--home-header-space: (var(--clamped-width) * 2 / 5 - 1.875rem);
+	--main-content-space: (var(--clamped-width) * 3 / 5);
+
+	grid-template-areas: "header header content content";
+	grid-template-rows: 100%;
+	grid-template-columns:
+		calc(var(--left-dead-space))
+		calc(var(--home-header-space))
+		calc(var(--main-content-space))
+		1fr;
+}
+
+@media screen and (max-width: 75rem) {
+    body {
+		display: grid;
+		--max-width: 100rem;
+		--clamped-width: min(100vw, var(--max-width));
+
+		--left-dead-space: ((100vw - var(--clamped-width) * 7 / 5) / 2);
+		--home-header-space: (var(--clamped-width) * 2 / 5 - 1.875rem);
+		--main-content-space: (var(--clamped-width) * 3 / 5);
+
+		grid-template-areas: "header" "content";
+		grid-template-rows: auto auto;
+		grid-template-columns: 100%;
+	}
+}
+
+.home-header {
+	grid-area: header;
+}
+main {
+	grid-area: content;
+}
+
+/*
+	Main content
+*/
+
+main {
+	padding: 1.875rem;
+}
+
+main > * {
+	max-width: 60rem;
+}
+
+main > * + * {
+	margin-top: 1.875rem;
+}
+
+.home-large-text {
+	font-weight: 600;
+    font-family: $font-display;
+	line-height: 125%;
+	font-size: 1.5rem;
+}
+
+/*
+    Home header
+*/
+
+.home-header {
+	padding: 4rem;
+	padding-left: calc(max(4rem, var(--left-dead-space) - 10rem));
+	padding-top: 0;
+
+	position: sticky;
+	top: 0;
+	height: 100vh;
+
+    display: grid;
+    grid-template:
+        "img" minmax(0, calc(min(27rem, 30vh)))
+		"." 1fr
+        "h1" auto
+        "h2" auto / 100%;
+    row-gap: 2rem;
+
+	color: $home-header-fg;
+	background-color: $home-header-bg;
+	background-image: $paper-bg;
+	overflow-x: hidden;
+}
+.home-header > a > img {
+    grid-area: img;
+}
+.home-header > h1 {
+    grid-area: h1;
+}
+.home-header > h2 {
+    grid-area: h2;
+}
+
+@media screen and (max-width: 75rem) {
+    .home-header {
+		padding-left: 4rem;
+		position: static;
+		height: auto;
+	}
+}
+
+.home-header > a {
+    display: contents;
+}
+
+.home-header > a > img {
+    display: block;
+	width: calc(100% + 6rem);
+    height: 100%;
+	object-fit: contain;
+	object-position: top right;
+    margin-top: -0.5rem;
+    mix-blend-mode: luminosity;
+    transition: transform 0.2s ease;
+}
+
+.home-header > a:hover > img {
+    transform: translateY(0.5rem);
+    mix-blend-mode: normal;
+}
+
+.home-header > h1 {
+    font-size: calc(min(min(4rem, 8vh), 12vw));
+}
+
+.home-header > h2 {
+	font-size: calc(min(min(2rem, 4vh), 6vw));
+	font-weight: 400;
+	max-width: 24ch;
+	text-wrap: balance;
+}
+
+/*
+    Post gallery + entries
+*/
+
+.post-gallery {
+    display: flex;
+    flex-direction: row;
+	max-width: none;
+	margin-left: -1.875rem;
+	margin-right: -1.875rem;
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+
+	--gallery-thumbnail-size: calc(var(--home-thumbnail-size) / 2);
+    height: calc(var(--gallery-thumbnail-size) * 1.2);
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scrollbar-width: none;
+}
+
+.post-gallery::-webkit-scrollbar {
+	background: transparent;
+	width: 0;
+	height: 0;
+  }
+
+.post-gallery-entry {
+	display: contents;
+}
+
+.post-gallery-entry > a {
+	display: block;
+    height: 100%;
+	aspect-ratio: 1;
+}
+
+.post-gallery-entry > a > img {
+	position: relative;
+	width: 83.3333%;
+	height: 83.3333%;
+	top: 8.3333%;
+	left: 0%;
+    object-fit: cover;
+	transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+}
+
+.post-gallery a:hover img {
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: -8.3333%;
+	transition: opacity 0.05s ease, width 0.05s ease, height 0.05s ease, top 0.05s ease, left 0.05s ease;
+}
+
+.post-gallery:has(a:hover) a:not(:hover) img {
+	opacity: 0.6;
+	mix-blend-mode: luminosity;
+}
+
+/*
+    Post list + entries
+*/
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.post-list-entry {
+    display: grid;
+
+    grid-template:
+        "img title" auto
+        "img blurb" auto
+        "img date" auto
+        "img ." 1fr / auto 1fr;
+    row-gap: 0.625rem;
+    column-gap: 1.875rem;
+}
+
+@media screen and (max-width: 30rem) {
+    .post-list-entry {
+        grid-template:
+            "img title" auto
+            "img date" auto
+            "img ." auto
+            "blurb blurb" auto / auto 1fr;
+        column-gap: 1.25rem;
+    }
+}
+
+.post-list-entry > a {
+    display: contents;
+    color: inherit;
+}
+
+.post-list-entry > a > img {
+    grid-area: img;
+    width: var(--home-thumbnail-size);
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.post-list-entry > a > h2 {
+    grid-area: title;
+}
+
+.post-list-entry > a > p {
+    grid-area: blurb;
+    max-height: 4.5rem;
+    overflow: hidden;
+}
+
+.post-list-entry > a > time {
+    grid-area: date;
+    color: $sub-fg;
+}
+
+/*
+    Footer
+*/
+
+footer {
+    font-size: 0.75rem;
+    margin-bottom: 15rem;
+}
+
+footer::after {
+    content: "Website theme by Daniel P H Fox.";
+}

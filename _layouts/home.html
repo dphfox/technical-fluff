@@ -1,34 +1,50 @@
----
-layout: bare
----
-<header class="home-header">
-  <a href="{{ site.personal_url }}" target="_blank">
-    <img src="/assets/home/headshot.png" alt="{{ site.personal_name }}">
-  </a>
-  <h1>{{ site.title }}</h1>
-  <h2>{{ site.description }}</h2>
-</header>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+{%- include head-home.html -%}
 
-<hr>
+<body>
+	<header class="home-header">
+		<a href="{{ site.personal_url }}" target="_blank">
+			<img src="/assets/home/headshot.png" alt="{{ site.personal_name }}">
+		</a>
+		<h1>{{ site.title }}</h1>
+		<h2>{{ site.description }}</h2>
+	</header>
 
-<main>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-      {%- assign thumbnail_index = forloop.index0 | modulo: site.default_thumbnails.size -%}
-      <li class="post-list-entry">
-        <a href="{{ post.url }}">
-          <h2>{{ post.title }}</h2>
-          <img src="{{ post.image.path }}" alt="{{ post.title }}">
-          {%- if post.excerpt -%}
-            <p>{{ post.excerpt | strip_html }}</p>
-          {%- endif -%}
-          <time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
-        </a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</main>
+	<main>
+		<p class="home-large-text">
+			This blog supports <a href="/feed.xml">RSS / Atom</a> for your favourite reader.<br>
+			Visit <a href="https://elttob.uk/go/masto">my Mastodon page</a> for my shorter quips.
+		</p>
+		<hr>
+		<ul class="post-gallery">
+			{%- for post in site.posts -%}
+			{%- assign thumbnail_index = forloop.index0 | modulo: site.default_thumbnails.size -%}
+			<li class="post-gallery-entry">
+				<a href="{{ post.url }}">
+					<img src="{{ post.image.path }}" alt="{{ post.title }}">
+				</a>
+			</li>
+			{%- endfor -%}
+		</ul>
+		<ul class="post-list">
+			{%- for post in site.posts -%}
+			{%- assign thumbnail_index = forloop.index0 | modulo: site.default_thumbnails.size -%}
+			<li class="post-list-entry">
+				<a href="{{ post.url }}">
+					<h2>{{ post.title }}</h2>
+					<img src="{{ post.image.path }}" alt="{{ post.title }}">
+					{%- if post.excerpt -%}
+					<p>{{ post.excerpt | strip_html }}</p>
+					{%- endif -%}
+					<time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
+				</a>
+			</li>
+			{%- endfor -%}
+		</ul>
+		<hr>
+		{%- include footer.html -%}
+	</main>
+</body>
 
-<hr>
-
-{%- include footer.html -%}
+</html>
