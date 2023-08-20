@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/github-reactions-suck/thumb.jpg"
   width: 256
   height: 256
+comments_url: ""
 ---
 Constructive feedback is important, but it's slipping through my fingers on
 GitHub.
@@ -13,7 +14,7 @@ Let me put that in context. Recently, I submitted a pull request to the Luau
 repo. The contents don't matter, but it did not initially appear popular because
 it got three thumbs-downs;
 
-![Screenshot; GitHub pull request OP comment, with 3 thumbs down reactions](../assets/posts/github-reactions-suck/github-reactions.png)
+![Screenshot; GitHub pull request OP comment, with 3 thumbs down reactions](/assets/posts/github-reactions-suck/github-reactions.png)
 
 Of these three thumbs-downers:
 
