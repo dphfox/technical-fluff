@@ -21,7 +21,7 @@ Of these three thumbs-downers:
 - one of them continued on to explain their reservations, so I could address
 them and add them into my PR (thanks!)
 - one of them only continued to thumbs-up a now-outdated criticism, so was that
-their criticism, or did they dislike other things too? ¯\_(ツ)_/¯
+their criticism, or did they dislike other things too? ¯\\_(ツ)_/¯
 - one of them simply did not provide further explanation at all
 
 This is a useless state of affairs. How am I supposed to act on feedback with no
