@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/github-reactions-suck/thumb.jpg"
   width: 256
   height: 256
-comments_url: ""
+comments_url: "https://tech.lgbt/@Elttob/110922745025276132"
 ---
 Constructive feedback is important, but it's slipping through my fingers on
 GitHub.
