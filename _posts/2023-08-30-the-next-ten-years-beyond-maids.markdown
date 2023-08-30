@@ -33,7 +33,7 @@ few values are in play, it's easy to remember and easy to audit, because it all
 fits roughly in working memory. The problem comes when you're wading in a small
 forest of objects, all of which *have* to be handled correctly. As the number of
 objects goes up, your capability to catch destruction errors goes down. It's all
-too easy for a `:destroy()` to be forgotton somewhere.
+too easy for a `:destroy()` to be forgotten somewhere.
 
 This is the destruction problem. How can we ensure objects are destroyed when we
 are done with them?
@@ -54,8 +54,6 @@ one larger value; you have reduced the number of things you need to track.
 ```lua
 local function Button(props: Props)
     local scope = Maid()
-
-    maid:destroy()
     
     local animColoured = scope:give(Spring(scope:give(Computed(function(use)
         return if use(props.Coloured) then 1 else 0
