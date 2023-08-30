@@ -50,7 +50,7 @@ far. When the Maid is destroyed, it runs through that list and destroys
 everything inside. This effectively consolidates a bunch of small values into
 one larger value; you have reduced the number of things you need to track.
 
-```Lua
+```lua
 local function Button(props: Props)
     local scope = Maid()
 
@@ -128,7 +128,7 @@ system and the API surfaces you expose. For us, that means that constructors
 must always accept a cleanup table, non-optionally. Whatever they construct,
 they must add into that table.
 
-```Lua
+```lua
 local function Button(props: Props)
     local scope = {}
     
@@ -173,7 +173,7 @@ step further and think of constructors as `associated methods operating on
 cleanup tables`. That is to say, constructors don't live *outside* of cleanup
 tables, but are the API surface *of* the cleanup table.
 
-```Lua
+```lua
 local function Button(props: Props)
     local scope = scoped(Fusion)
     
@@ -211,7 +211,7 @@ table in front for the method call. It is exceptionally clean.
 All of this is achieved with almost *zero* actual code, too. You only need two
 functions. One is just shorthand for creating cleanup tables:
 
-```Lua
+```lua
 local function scoped(constructors)
     return setmetatable({}, {__index = constructors})
 end
@@ -220,7 +220,7 @@ end
 The other is used for destroying those cleanup tables, practically the same as
 what Maids already implement:
 
-```Lua
+```lua
 local function doCleanup(task)
 	local taskType = typeof(task)
 	if taskType == "Instance" then

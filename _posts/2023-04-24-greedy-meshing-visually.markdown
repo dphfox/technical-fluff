@@ -27,7 +27,7 @@ By the way, finding a starting point isn't too hard. It's pretty sufficient to
 just loop over them in the normal way - you'll always have merged every block by
 the end, and it's relatively efficient at merging things into large groups.
 
-```Lua
+```lua
 for x = 1, size.x do
     for y = 1, size.y do
         for z = 1, size.z do
