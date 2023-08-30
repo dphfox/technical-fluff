@@ -168,8 +168,8 @@ to your cleanup tables. It happens automatically with very little line bloat,
 and it's statically analysable no matter what odd situation you're stuck in.
 
 If you want to get a truly deluxe developer experience though, you can go one
-step further and think of constructors as `associated methods operating on
-cleanup tables`. That is to say, constructors don't live *outside* of cleanup
+step further and think of constructors as *associated methods operating on
+cleanup tables*. That is to say, constructors don't live *outside* of cleanup
 tables, but are the API surface *of* the cleanup table.
 
 ```lua
