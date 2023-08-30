@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/the-next-ten-years-beyond-maids/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://tech.lgbt/@Elttob/110975754933352754"
 ---
 
 Maids have been the dominant destruction pattern in Lua(u) for a decade - but
