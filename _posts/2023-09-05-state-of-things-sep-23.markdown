@@ -5,6 +5,7 @@ image:
   path: "/assets/posts/state-of-things-sep-23/thumb.jpg"
   width: 256
   height: 256
+comments_url: "https://tech.lgbt/@Elttob/111010545566054008"
 ---
 
 I'm unmuddling my brain by laying out the status of everything I'm working on,
