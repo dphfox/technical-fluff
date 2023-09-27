@@ -29,7 +29,7 @@ as a consumer of Twitter is to kill your feed.
 
 Do this:
 
-- Stop following shit on Twitter. Keep up to date  elsewhere if at all possible.
+- Stop following shit on Twitter. Keep up to date elsewhere if at all possible.
 - Unfollow every topic. Find other communities elsewhere to replace them.
 - Unfollow people when you can follow them elsewhere.
 - Unfollow people you can't follow them elsewhere if you're not
