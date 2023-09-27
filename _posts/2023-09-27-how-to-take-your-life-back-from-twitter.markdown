@@ -5,7 +5,7 @@ image:
   path: "/assets/posts/how-to-take-your-life-back-from-twitter/thumb.jpg"
   width: 256
   height: 256
-comments_url: "https://tech.lgbt/@Elttob/111010545566054008"
+comments_url: "https://tech.lgbt/@Elttob/111136423517477322"
 ---
 
 It's been 182 days since I got so pissed off at Elon Musk that I unfollowed
@@ -32,8 +32,8 @@ Do this:
 - Stop following shit on Twitter. Keep up to date elsewhere if at all possible.
 - Unfollow every topic. Find other communities elsewhere to replace them.
 - Unfollow people when you can follow them elsewhere.
-- Unfollow people you can't follow them elsewhere if you're not
-*actually* interested in what they're posting.
+- Unfollow people you can't follow elsewhere if you're not *actually* interested
+in what they're posting.
 - Bridges are good, actually. Unless you're, like, on a Mastodon instance with a
 knobhead purist owner, use them to stay connected to the people who you can't
 find elsewhere.
