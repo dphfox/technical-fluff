@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-03-10-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-03-10-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-03-10-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-03-10-early-ruminations-on-monorepo-life.md"
+                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md"
               }
             }
           }
@@ -146,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c67ee9ea0bc7f4c2",
+  "active": "2153a5e9f49f8efa",
   "lastOpenFiles": [
     "assets/posts/early-ruminations-on-monorepo-life/thumb.jpg",
     "assets/posts/early-ruminations-on-monorepo-life",
