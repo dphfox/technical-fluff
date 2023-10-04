@@ -71,4 +71,4 @@ To summarise:
 
 The difference matters. Choose an opinion and document why in your code.
 
-I would strongly recommend setting up a lint for `math.round(x)` to make sure your team members (and you in six months time are aware of the issue and are thinking actively about it. There is little use case for having inconsistent behaviour, and if you do by chance need to round towards zero you can suppress the lint for that one use and document why you're suppressing it. Otherwise, flagging it up is a good idea, and using a more consistently behaving alternative is best.
+I would strongly recommend setting up a lint for `math.round(x)` to make sure your team members (and you in six months time) are aware of the issue and are thinking actively about it. There is little use case for having inconsistent behaviour, and if you do by chance need to round towards zero you can suppress the lint for that one use and document why you're suppressing it. Otherwise, flagging it up is a good idea, and using a more consistently behaving alternative is best.
