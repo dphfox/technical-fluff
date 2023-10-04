@@ -69,6 +69,6 @@ To summarise:
 - `math.floor(x + 0.5)` rounds any .5 downwards, consistently
 - `math.ceil(x - 0.5)` rounds any .5 upwards, consistently
 
-The difference matters. Choose an opinion and document why in your %% code %%.
+The difference matters. Choose an opinion and document why in your code.
 
 I would strongly recommend setting up a lint for `math.round(x)` to make sure your team members (and you in six months time are aware of the issue and are thinking actively about it. There is little use case for having inconsistent behaviour, and if you do by chance need to round towards zero you can suppress the lint for that one use and document why you're suppressing it. Otherwise, flagging it up is a good idea, and using a more consistently behaving alternative is best.
