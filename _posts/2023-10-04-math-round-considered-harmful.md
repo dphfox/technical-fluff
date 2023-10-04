@@ -22,7 +22,7 @@ Ditto for `ceil()` functions. Some people think they round away from zero, and o
 
 Importantly, ditto for `round()` functions. When you `round(0.5)` (or any other perfectly-in-between number), it can either round towards zero, it can round up, or it can round down.
 
-In Lua 5.1, `math.floor()` always rounds down. Similarly, `math.ceil()` always rounds up. Luau later implemented the `math.round()` function, which users *widely believe* to be equivalent to `math.floor(x + 0.5)`. That is to say, it rounds `0.5` down.
+In Lua 5.1, `math.floor()` always rounds down. Similarly, `math.ceil()` always rounds up. Luau later implemented the `math.round()` function, which users *widely believe* to be equivalent to `math.floor(x + 0.5)`. That is to say, it rounds `0.5` up.
 
 If you believe this, you are wrong. 
 
@@ -49,7 +49,7 @@ end
 
 If the above code encounters a position with any negative .5 ordinates/components, it will give you the wrong grid cell. Specifically, as you cross the number zero, you will end up with inconsistent behaviour, because the direction of rounding changes as you pass over zero.
 
-The only way to fix the code snippet is to have a consistent rounding direction. That is to say, you either use `math.floor(x + 0.5)` (which rounds any .5 down every time) or `math.ceil(x - 0.5)` (which rounds any .5 up every time).
+The only way to fix the code snippet is to have a consistent rounding direction. That is to say, you either use `math.floor(x + 0.5)` (which rounds any .5 up every time) or `math.ceil(x - 0.5)` (which rounds any .5 down every time).
 
 ```lua
 local CELL_SIZE = 16
@@ -67,8 +67,8 @@ end
 To summarise:
 
 - `math.round(x)` rounds any .5 inconsistently - upwards for negatives, downwards for positives.
-- `math.floor(x + 0.5)` rounds any .5 downwards, consistently
-- `math.ceil(x - 0.5)` rounds any .5 upwards, consistently
+- `math.floor(x + 0.5)` rounds any .5 upwards, consistently
+- `math.ceil(x - 0.5)` rounds any .5 downwards, consistently
 
 The difference matters. Choose an opinion and document why in your code.
 
