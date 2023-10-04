@@ -5,6 +5,7 @@ image:
   path: /assets/posts/math-round-considered-harmful/thumb.jpg
   width: 256
   height: 256
+comments_url: https://tech.lgbt/@Elttob/111177976192269178
 ---
 
 `math.round(x)` is the same as `math.floor(x + 0.5)`, *riiiiiiiiiiiiight?*
