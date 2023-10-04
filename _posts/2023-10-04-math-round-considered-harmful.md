@@ -48,7 +48,7 @@ end
 
 If the above code encounters a position with any negative .5 ordinates/components, it will give you the wrong grid cell. Specifically, as you cross the number zero, you will end up with inconsistent behaviour, because the direction of rounding changes as you pass over zero.
 
-The only way to fix the code snippet is to have a consistent rounding direction. That is to say, you either use `math.floor(x + 0.5)` (which rounds any .5 down every time) or `math.ceil(x - 0.5)` (which rounds any .5 every time).
+The only way to fix the code snippet is to have a consistent rounding direction. That is to say, you either use `math.floor(x + 0.5)` (which rounds any .5 down every time) or `math.ceil(x - 0.5)` (which rounds any .5 up every time).
 
 ```lua
 local CELL_SIZE = 16
