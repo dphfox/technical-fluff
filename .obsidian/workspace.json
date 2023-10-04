@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-04-math-round-considered-harmful.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-04-math-round-considered-harmful.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
+                "file": "_posts/2023-10-04-math-round-considered-harmful.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-10-03-early-ruminations-on-monorepo-life.md"
+                "file": "_posts/2023-10-04-math-round-considered-harmful.md"
               }
             }
           }
@@ -146,11 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2153a5e9f49f8efa",
+  "active": "c67ee9ea0bc7f4c2",
   "lastOpenFiles": [
+    "assets/posts/math-round-considered-harmful/thumb.jpg",
+    "assets/posts/math-round-considered-harmful",
+    "assets/posts/New folder",
+    "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
+    "_posts/2023-10-04-math-round-considered-harmful.md",
+    "Untitled.md",
     "assets/posts/early-ruminations-on-monorepo-life/thumb.jpg",
     "assets/posts/early-ruminations-on-monorepo-life",
-    "assets/posts/New folder",
     "_posts/2022-11-05-so-i-have-a-blog-now.md"
   ]
 }
