@@ -1,1 +1,11 @@
-{}
+{
+  "editor:toggle-comments": [],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "/"
+    }
+  ]
+}
