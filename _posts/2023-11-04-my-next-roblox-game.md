@@ -2,7 +2,7 @@
 layout: post
 title: My next Roblox game
 image:
-  path: /assets/posts/my-next-puzzle-game/thumb.jpg
+  path: /assets/posts/my-next-roblox-game/thumb.jpg
   width: 256
   height: 256
 ---
