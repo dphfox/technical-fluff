@@ -6,7 +6,7 @@ image:
   width: 256
   height: 256
 ---
-[Roblox is getting editable meshes - and that's going to change the platform forever.|https://x.com/dub_dino/status/1670265140795809794] Yet, after playing around with `DynamicMesh`/`EditableMesh` for a while, I have thoughts.
+[Roblox is getting editable meshes - and that's going to change the platform forever.](https://x.com/dub_dino/status/1670265140795809794) Yet, after playing around with `DynamicMesh`/`EditableMesh` for a while, I have thoughts.
 
 ## Do it yourself
 
