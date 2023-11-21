@@ -36,6 +36,6 @@ I'm really hoping this stuff works in Studio, since my domain is building profes
 
 I even have a few gorgeous graphics hacks in my back pocket that would get totally blown wide open by dynamic mesh access. For example, [I recently figured out how to do PBR material blending with detailed transitions.]  Since this depends on mesh trickery and specially authored PBR materials, it's currently something you have to manually (and slowly) author externally, then carefully recreate in Studio. In the future, it'd be totally reasonable to depend on `EditableMesh` access to let you paint it directly in Studio. If that's then combined with the ability to *generate* PBR materials from scripts using `EditableImage`, well, you've got yourself a fully automated process. Imagine being able to paint this shit in real time, *on any surface*:
 
-![Cobblestones blending naturally into forest ground.](pretty-transitions.jpg)
+![Cobblestones blending naturally into forest ground.](/assets/posts/meshy-musings/pretty-transitions.jpg)
 
 We're in for a good time.
