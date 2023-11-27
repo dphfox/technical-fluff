@@ -42,11 +42,11 @@ However, we can't expect all plugins to behave, and moreover, we can't expect on
 
 I suggest sorting the competing actions into tiers. Here's a suggestion for what these tiers could look like:
 
-1) Actions belonging to Roblox Studio
-2) Actions belonging to the plugin with the currently focused dock widget
-3) Actions belonging to the activated plugin with the exclusive mouse
-4) Actions belonging to any activated plugins regardless of exclusive mouse
-5) Actions belonging to any other plugins
+- Actions belonging to Roblox Studio
+- Actions belonging to the plugin with the currently focused dock widget
+- Actions belonging to the activated plugin with the exclusive mouse
+- Actions belonging to any activated plugins regardless of exclusive mouse
+- Actions belonging to any other plugins
 
 If actions exist in a tier, all lower tiers are ignored. The actions in the highest (non-empty) tier are left to compete among themselves.
 
