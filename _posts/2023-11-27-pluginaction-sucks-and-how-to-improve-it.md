@@ -68,7 +68,13 @@ However, as the last example demonstrates, this priority system won't resolve al
 ![Toast saying 'G key binding failed; it is used by 5 actions (Foo, Bar, Baz, Frob, Garb)' with a link to 'Change keyboard shortcuts'.](/assets/posts/pluginaction-sucks-and-how-to-improve-it/toast.png)
 
 This is better than silently failing and it's better than choosing something arbitrary for the user. It makes sure they're aware of the conflict and gives them control over how it is resolved.
+### Edit: an alternate solution
 
+I mentioned this to my partner and they suggested the conflicting actions be presented in a menu instead of failing completely. Perhaps it could look like the Blender pie menu for best ergonomics:
+
+![Image of a pie menu in Blender.](/assets/posts/pluginaction-sucks-and-how-to-improve-it/blender-pie.png)
+
+This would be a nice Roblox-sanctioned way for users to construct their own menus! I actually quite like it.
 ## Is it good enough?
 
 Let's check this new design against our criteria:
