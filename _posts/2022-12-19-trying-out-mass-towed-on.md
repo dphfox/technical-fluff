@@ -24,5 +24,5 @@ ported over as much of it as I can, maybe it'll be different.
 
 We'll re-evaluate at some point maybe.
 
-Anyway, I'm [@Elttob@tech.lgbt](https://tech.lgbt/@Elttob) - if it works out,
+Anyway, I'm [@phfox@tech.lgbt](https://tech.lgbt/@phfox) - if it works out,
 I'll consider maybe hosting my own instance here on elttob.uk, but no promises.
