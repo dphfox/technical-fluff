@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
+                "file": "_posts/2024-01-07-a-reactive-smart-home.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
+                "file": "_posts/2024-01-07-a-reactive-smart-home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
+                "file": "_posts/2024-01-07-a-reactive-smart-home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md"
+                "file": "_posts/2024-01-07-a-reactive-smart-home.md"
               }
             }
           }
@@ -148,30 +148,36 @@
   },
   "active": "18eba432d2360d70",
   "lastOpenFiles": [
-    "assets/posts/pluginaction-sucks-and-how-to-improve-it/blender-pie.png",
-    "assets/posts/pluginaction-sucks-and-how-to-improve-it/thumb.jpg",
-    "_posts/2023-11-20-meshy-musings.md",
+    "assets/posts/a-reactive-smart-home/thumb.jpg",
+    "assets/posts/a-reactive-smart-home",
+    "assets/posts/New folder",
     "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
-    "assets/posts/meshy-musings/pretty-transitions.jpg",
-    "assets/posts/pluginaction-sucks-and-how-to-improve-it/toast.png",
+    "_posts/2024-01-07-a-reactive-smart-home.md",
+    "Pasted image 20240104230948.png",
+    "Pasted image 20240104225641.png",
+    "_posts/2024-01-05-a-toy-multitasking-ux.md",
+    "Pasted image 20240104232007.png",
+    "Pasted image 20240104231557.png",
+    "Pasted image 20240104231519.png",
+    "Pasted image 20240104231233.png",
+    "Pasted image 20240104231032.png",
+    "Pasted image 20240104230733.png",
+    "Pasted image 20240104230459.png",
+    "Pasted image 20240104230356.png",
+    "Untitled.md",
+    "_posts/2023-11-20-meshy-musings.md",
     "assets/posts/pluginaction-sucks-and-how-to-improve-it",
     "_posts/2023-08-20-github-reactions-suck.md",
     "_posts/2023-09-27-how-to-take-your-life-back-from-twitter.md",
     "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
     "_posts/2023-10-04-math-round-considered-harmful.md",
-    "assets/posts/meshy-musings/thumb.jpg",
     "assets/posts/meshy-musings/thumb.jpg.0.pdnSave",
-    "assets/posts/meshy-musings/56f83b135e87eee3.png",
     "assets/posts/meshy-musings/pretty-transitions.jpg.0.pdnSave",
     "assets/posts/meshy-musings",
     "_posts/2023-11-04-my-next-roblox-game.md",
     "_posts/2023-10-17-return-to-office.md",
-    "assets/posts/my-next-roblox-game/thumb.jpg",
     "assets/posts/my-next-roblox-game",
-    "assets/posts/New folder",
-    "assets/posts/math-round-considered-harmful/thumb.jpg",
     "assets/posts/math-round-considered-harmful",
-    "assets/posts/early-ruminations-on-monorepo-life/thumb.jpg",
     "assets/posts/early-ruminations-on-monorepo-life",
     "_posts/2022-11-05-so-i-have-a-blog-now.md"
   ]
