@@ -26,18 +26,14 @@ Okay, let's talk design.
 ## The criteria
 
 I'm going to measure different designs based on certain criteria, in a totally subjective, personal-opinion, disagree-with-me way. I'll make sure I'm not designing them ultra-minimalist, and including a reasonable baseline of detail - the amount I'd expect from a decently designed OS vendor.
-### Criteria 1: Affordance
 
-How well does this design communicate that it's clickable? Does it communicate the extent of its hitbox well? Is the user drawn to interact with it in a certain way, and are all usages clearly communicated?
-### Criteria 2: Legibility
+**Affordance:** How well does this design communicate that it's clickable? Does it communicate the extent of its hitbox well? Is the user drawn to interact with it in a certain way, and are all usages clearly communicated?
+ 
+**Legibility:** Does this design stand out against its background? Is it easy to read the current state of the design? Does it depend heavily on factors that might disadvantage those with vision impairments?
 
-Does this design stand out against its background? Is it easy to read the current state of the design? Does it depend heavily on factors that might disadvantage those with vision impairments?
-### Criteria 3: Predictability
+**Predictability:** Can you tell what the design does just by looking at it? Does it communicate grouping or mutual exclusivity well? Can you predict the result of clicking it ahead of time?
 
-Can you tell what the design does just by looking at it? Does it communicate grouping or mutual exclusivity well? Can you predict the result of clicking it ahead of time?
-### Criteria 4: Ergonomics
-
-Does this design use space well? How much mouse movement does the design imply, and how much is required for it to work?
+**Ergonomics:** Does this design use space well? How much mouse movement does the design imply, and how much is required for it to work?
 
 ## Radio button designs
 
@@ -59,10 +55,10 @@ I think the skeuomorphism of basing this design on similar 'paper forms' is okay
 
 Overall, it's certainly what we use now, but it's far from a clear winner.
 
-**Affordance:** Mixed
-**Legibility:** Poor
-**Predictability**: Mixed
-**Ergonomics:** Good
+- **Affordance:** Mixed
+- **Legibility:** Poor
+- **Predictability**: Mixed
+- **Ergonomics:** Good
 
 ### Design 2: Connected
 
@@ -76,10 +72,10 @@ I think it regains a little bit on the affordance. It's still somewhat dependent
 
 I'm not sure how this would work with multiple-column radio button groups though, so I'm going to dock points for ergonomics because it might end up being space inefficient.
 
-**Affordance:** Mixed to Good
-**Legibility:** Poor
-**Predictability:** Great
-**Ergonomics:** Mixed to Good
+- **Affordance:** Mixed to Good
+- **Legibility:** Poor
+- **Predictability:** Great
+- **Ergonomics:** Mixed to Good
 
 ### Design 3: Slider
 
@@ -94,10 +90,10 @@ Legibility is alright. The main problem I can foresee is that slider track becom
 
 Also; see last point about multi-column layouts.
 
-**Affordance:** Great
-**Legibility:** Good
-**Predictability:** Great
-**Ergonomics:** Mixed to Poor
+- **Affordance:** Great
+- **Legibility:** Good
+- **Predictability:** Great
+- **Ergonomics:** Mixed to Poor
 
 ### Design 4: Buttons
 
@@ -112,10 +108,10 @@ I also tried to emphasise the currently active option by making it look inset. I
 
 Using buttons like this might take up more pixels, but you might also save pixels if you wanted to include icons. I think it's a pretty equivalent trade. I'll put it down as 'good' rather than 'great' just to indicate that you might lose a touch of space efficiency if the UI is particularly dense, but I don't think it's that bad. Honestly, I prefer a little more room in my UI - it's easier to parse and less distracting, but I won't speak for everyone.
 
-**Affordance:** Good
-**Legibility:** Great
-**Predictability:** Great
-**Ergonomics:** Good
+- **Affordance:** Good
+- **Legibility:** Great
+- **Predictability:** Great
+- **Ergonomics:** Good
 
 -----
 
@@ -141,10 +137,10 @@ The point about the legibility of the unfilled state is extra pertinent here. It
 
 Overall, I'm still not overly impressed.
 
-**Affordance:** Mixed
-**Legibility:** Poor
-**Predictability**: Good
-**Ergonomics:** Good
+- **Affordance:** Mixed
+- **Legibility:** Poor
+- **Predictability**: Good
+- **Ergonomics:** Good
 
 ### Design 2: Modernity
 
@@ -152,10 +148,10 @@ Overall, I'm still not overly impressed.
 
 Ah yes. It's Tradition but even worse now, because you can't tell the difference between a check box and a radio button. It's literally no better - predictability has tanked.
 
-**Affordance:** Mixed
-**Legibility:** Poor
-**Predictability**: Poor
-**Ergonomics:** Good
+- **Affordance:** Mixed
+- **Legibility:** Poor
+- **Predictability**: Poor
+- **Ergonomics:** Good
 
 ### Design 3: Switch
 
@@ -169,10 +165,10 @@ The legibility of these designs, though? They are *fantastic*. Like, chef kiss l
 
 Switches are very predictable as a design, and the ergonomics are better because they're a larger hit target compared to your typical check box. They don't necessarily have to be less space efficient - you can get away with it being just slightly wider than a check box at the same height - but I will say that they heavily imply a dragging motion, so I'll at least dock points for that. In fairness, it's not quite as large of a distance as the slider was.
 
-**Affordance:** Great
-**Legibility:** Great
-**Predictability**: Great
-**Ergonomics:** Good
+- **Affordance:** Great
+- **Legibility:** Great
+- **Predictability**: Great
+- **Ergonomics:** Good
 
 ### Design 4: Modernity Plus
 
@@ -184,10 +180,10 @@ Legibility has taken a huge jump here; the unfilled states are much more contras
 
 Overall though? It works better.
 
-**Affordance:** Good
-**Legibility:** Great
-**Predictability**: Mixed
-**Ergonomics:** Good
+- **Affordance:** Good
+- **Legibility:** Great
+- **Predictability**: Mixed
+- **Ergonomics:** Good
 
 ### Design 5: Tradition Plus
 
@@ -195,10 +191,10 @@ Overall though? It works better.
 
 If we give Tradition the same treatment, you get way better legibility, but not much else changes. As before with Modernity Plus, it looks a little too 'close-buttony' for me to have unfiltered enthusiasm for it.
 
-**Affordance:** Mixed
-**Legibility:** Great
-**Predictability**: Mixed
-**Ergonomics:** Good
+- **Affordance:** Mixed
+- **Legibility:** Great
+- **Predictability**: Mixed
+- **Ergonomics:** Good
 
 ### Design 6: Buttons
 
@@ -210,10 +206,10 @@ While it's true that the hit region is again spectacularly well outlined, it sti
 
 I think it's probably good for some contexts, but I'm not enamoured this time around.
 
-**Affordance:** Good
-**Legibility:** Great
-**Predictability**: Mixed to Good
-**Ergonomics:** Great
+- **Affordance:** Good
+- **Legibility:** Great
+- **Predictability**: Mixed to Good
+- **Ergonomics:** Great
 
 -----
 
