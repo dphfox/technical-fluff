@@ -80,6 +80,7 @@ I'm not sure how this would work with multiple-column radio button groups though
 ### Design 3: Slider
 
 ![A vertical slider to the left, pointing at the options.](/assets/posts/square-checkboxes-a-gen-z-review/radio-sliding.png)
+
 Let's try a design that strays from the 'paper form' skeuomorphism of Tradition and Connected. I saw this one suggested somewhere too.
 
 I think this is much more intuitive than the prior designs; sliders are more fundamental and physical of a skeuomorphism than forms are. Especially with the inclusion of the dragging affordance on the slider head, it seems like it would be incredibly compelling to drag.
@@ -98,6 +99,7 @@ Also; see last point about multi-column layouts.
 ### Design 4: Buttons
 
 ![A vertically arranged group of buttons glued together, with the active button depressed and coloured.](/assets/posts/square-checkboxes-a-gen-z-review/radio-buttongroup.png)
+
 This is probably what I would do as a designer from the 'new generation'. From what little I've overheard about car radios in these discussions, it perhaps mimics actual 'radio buttons' a bit more closely.
 
 So long as you're actually putting backplates on your buttons, I think this is probably one of the best ways of communicating the hit region. Presented with this design, I think newer users would strain less because it's immediately obvious there's a huge space for the cursor to land on, which should make them feel more comfortable.
