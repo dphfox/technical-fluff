@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-01-10-ultrawide-fluid-typography.md",
+                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-01-10-ultrawide-fluid-typography.md",
+                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-01-10-ultrawide-fluid-typography.md",
+                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-01-10-ultrawide-fluid-typography.md"
+                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md"
               }
             }
           }
@@ -148,39 +148,39 @@
   },
   "active": "18eba432d2360d70",
   "lastOpenFiles": [
+    "_posts/2024-01-10-ultrawide-fluid-typography.md",
+    "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
+    "assets/posts/square-checkboxes-a-gen-z-review/thumb.jpg",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-empty.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-switch.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-x.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-x.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-empty.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/radio-separate.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-buttons.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/radio-buttongroup.png",
+    "assets/posts/square-checkboxes-a-gen-z-review/radio-sliding.png",
+    "assets/posts/square-checkboxes-a-gen-z-review",
+    "assets/posts/New folder",
     "assets/posts/ultrawide-fluid-typography/thumb.jpg.0.pdnSave",
     "_posts/2022-11-20-better-volumetric-light-beams.md",
-    "_posts/2024-01-10-ultrawide-fluid-typography.md",
-    "assets/posts/ultrawide-fluid-typography/inter32by9.jpg",
     "assets/posts/ultrawide-fluid-typography/inter32by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/inter16by9.jpg",
     "assets/posts/ultrawide-fluid-typography/inter16by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/techfluff32by9.jpg",
     "assets/posts/ultrawide-fluid-typography/techfluff32by9.jpg.0.pdnSave",
     "_posts/2024-01-07-a-reactive-smart-home.md",
-    "assets/posts/ultrawide-fluid-typography/personal32by9.jpg",
     "assets/posts/ultrawide-fluid-typography/personal32by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/personal21by9.jpg",
     "assets/posts/ultrawide-fluid-typography/personal21by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/personal4by3.jpg",
     "assets/posts/ultrawide-fluid-typography/personal4by3.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/Screen Shot 2024-01-10 at 10.47.21.png",
-    "Pasted image 20240110104844.png",
     "_posts/2023-11-20-meshy-musings.md",
     "_posts/Untitled.md",
-    "assets/posts/a-reactive-smart-home/thumb.jpg",
     "assets/posts/a-reactive-smart-home",
-    "assets/posts/New folder",
     "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
-    "Pasted image 20240104230948.png",
     "_posts/2024-01-05-a-toy-multitasking-ux.md",
     "Untitled.md",
-    "assets/posts/pluginaction-sucks-and-how-to-improve-it",
     "_posts/2023-08-20-github-reactions-suck.md",
     "_posts/2023-09-27-how-to-take-your-life-back-from-twitter.md",
     "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
     "_posts/2023-10-04-math-round-considered-harmful.md",
-    "assets/posts/meshy-musings/thumb.jpg.0.pdnSave",
     "_posts/2023-11-04-my-next-roblox-game.md",
     "_posts/2023-10-17-return-to-office.md",
     "_posts/2022-11-05-so-i-have-a-blog-now.md"
