@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
+                "file": "_posts/2024-03-10-musings-on-structural-code-editing.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
+                "file": "_posts/2024-03-10-musings-on-structural-code-editing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
+                "file": "_posts/2024-03-10-musings-on-structural-code-editing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md"
+                "file": "_posts/2024-03-10-musings-on-structural-code-editing.md"
               }
             }
           }
@@ -148,8 +148,18 @@
   },
   "active": "18eba432d2360d70",
   "lastOpenFiles": [
-    "_posts/2024-01-10-ultrawide-fluid-typography.md",
+    "assets/posts/musings-on-structural-code-editing/thumb.jpg",
+    "assets/posts/musings-on-structural-code-editing/formatting.png",
+    "assets/posts/musings-on-structural-code-editing/formatting.png.0.pdnSave",
+    "assets/posts/musings-on-structural-code-editing/beyondvertical.png",
+    "assets/posts/musings-on-structural-code-editing/beyondvertical.png.0.pdnSave",
+    "assets/posts/musings-on-structural-code-editing/textlike.png",
+    "assets/posts/musings-on-structural-code-editing/textlike.png.0.pdnSave",
+    "assets/posts/musings-on-structural-code-editing",
+    "assets/posts/New folder",
     "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
+    "_posts/2024-03-10-musings-on-structural-code-editing.md",
+    "_posts/2024-01-10-ultrawide-fluid-typography.md",
     "assets/posts/square-checkboxes-a-gen-z-review/thumb.jpg",
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-empty.png",
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-switch.png",
@@ -157,23 +167,15 @@
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-x.png",
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-empty.png",
     "assets/posts/square-checkboxes-a-gen-z-review/radio-separate.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-buttons.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/radio-buttongroup.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/radio-sliding.png",
     "assets/posts/square-checkboxes-a-gen-z-review",
-    "assets/posts/New folder",
     "assets/posts/ultrawide-fluid-typography/thumb.jpg.0.pdnSave",
     "_posts/2022-11-20-better-volumetric-light-beams.md",
     "assets/posts/ultrawide-fluid-typography/inter32by9.jpg.0.pdnSave",
     "assets/posts/ultrawide-fluid-typography/inter16by9.jpg.0.pdnSave",
     "assets/posts/ultrawide-fluid-typography/techfluff32by9.jpg.0.pdnSave",
     "_posts/2024-01-07-a-reactive-smart-home.md",
-    "assets/posts/ultrawide-fluid-typography/personal32by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/personal21by9.jpg.0.pdnSave",
-    "assets/posts/ultrawide-fluid-typography/personal4by3.jpg.0.pdnSave",
     "_posts/2023-11-20-meshy-musings.md",
     "_posts/Untitled.md",
-    "assets/posts/a-reactive-smart-home",
     "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
     "_posts/2024-01-05-a-toy-multitasking-ux.md",
     "Untitled.md",
