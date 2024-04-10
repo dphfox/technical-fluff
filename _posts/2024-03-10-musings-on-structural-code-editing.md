@@ -9,7 +9,7 @@ image:
 
 One of my long term aspirations is to design the structural code editor that actually sticks, mostly because I don't entirely vibe with text. It's not something I'm working on today, but I have a couple of opinions about how it should be done that I'd like to verify or discard eventually.
 
-## Normalised formatting
+## Normalised **formatting**
 
 ![Hand-drawn diagram showing different formatting for viewing and saving.](/assets/posts/musings-on-structural-code-editing/formatting.png)
 
