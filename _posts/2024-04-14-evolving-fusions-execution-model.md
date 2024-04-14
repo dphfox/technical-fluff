@@ -21,7 +21,7 @@ Not without a radical rethinking of the idea, at least.
 
 What if accessing a dependency caused it to become ready? If you happened to access something out of order, why don't we just shimmy around the order of things and force that dependency to quickly prepare itself at the last minute? That'd *provably* solve every problem Fusion has with dependencies not being ready.
 
-But wait - if that *alone* guarantees that dependencies will be ready, do we even *need* all that other update-pushing stuff? Well, yeah, but only for the simple reason that, if you don't push *some* kind of update down the graph, you'll never know when to run your observers and whatnot. However, you don't need to push *computation-spawning* updates down the thread anymore, because those will happen just in time whenever you ask for the result of the computation.
+But wait - if that *alone* guarantees that dependencies will be ready, do we even *need* all that other update-pushing stuff? Well, yeah, but only for the simple reason that, if you don't push *some* kind of update down the graph, you'll never know when to run your observers and whatnot. However, you don't need to push *computation-spawning* updates down the graph anymore, because those will happen just in time whenever you ask for the result of the computation.
 
 That's the premise of *pull-based reactive systems*. I've been experimenting with the idea for a while as part of my `tokamak` research library. 
 
