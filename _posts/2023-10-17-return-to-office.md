@@ -5,6 +5,7 @@ image:
   path: /assets/posts/return-to-office/thumb.jpg
   width: 256
   height: 256
+spicy: true
 ---
 
 If RTO was about workers, remote work would be a personal or team choice. 

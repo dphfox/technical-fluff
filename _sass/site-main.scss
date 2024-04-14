@@ -1,7 +1,13 @@
 @import "site-common";
 
 :root {
-    --gutter-size: 2.5rem;
+    --gutter-size: 3.5rem;
+}
+
+@media screen and (max-width: 100rem) {
+    :root {
+		--gutter-size: 2.5rem;
+	}
 }
 
 @media screen and (max-width: 50rem) {
@@ -11,13 +17,44 @@
 }
 
 body {
-    width: calc(100% - var(--gutter-size)*2);
-    max-width: 57.5rem;
-    margin: 0 auto;
+	display: grid;
+	--max-width: 100rem;
+	--clamped-width: min(100vw, var(--max-width));
 
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+	--left-dead-space: ((100vw - var(--clamped-width) * 7 / 5) / 2);
+	--home-header-space: (var(--clamped-width) * 2 / 5 - 1.875rem);
+	--main-content-space: (var(--clamped-width) * 3 / 5);
+
+	grid-template-areas: "header header content content";
+	grid-template-rows: 100%;
+	grid-template-columns:
+		calc(var(--left-dead-space))
+		calc(var(--home-header-space))
+		calc(var(--main-content-space))
+		1fr;
+}
+
+@media screen and (max-width: 80rem) {
+    body {
+		display: grid;
+		--max-width: 100rem;
+		--clamped-width: min(100vw, var(--max-width));
+
+		--left-dead-space: ((100vw - var(--clamped-width) * 7 / 5) / 2);
+		--home-header-space: (var(--clamped-width) * 2 / 5 - 1.875rem);
+		--main-content-space: (var(--clamped-width) * 3 / 5);
+
+		grid-template-areas: "header" "content";
+		grid-template-rows: auto auto;
+		grid-template-columns: 100%;
+	}
+}
+
+.post-header {
+	grid-area: header;
+}
+main {
+	grid-area: content;
 }
 
 /*
@@ -25,38 +62,146 @@ body {
 */
 
 .post-header {
+	padding: var(--gutter-size);
+	padding-left: calc(max(var(--gutter-size), var(--left-dead-space) - 10rem));
+
+	position: sticky;
+	top: 0;
+	height: 100vh;
+
     display: grid;
     grid-template:
-        "." 12.5rem
         "nav" auto
-        "h1" auto / 1fr;
-    row-gap: 2.5rem;
-}
+		"." minmax(2rem, 1fr)
+        "info" auto / 100%;
 
+	color: $header-fg;
+	background-color: $header-bg;
+	background-image: $paper-bg;
+	overflow-x: hidden;
+}
 .post-header > .post-nav {
     grid-area: nav;
 }
-
-.post-header > h1 {
-    grid-area: h1;
+.post-header > .post-info {
+    grid-area: info;
 }
 
-/*
-    Post nav
-*/
+@media screen and (max-width: 80rem) {
+    .post-header {
+		padding-left: var(--gutter-size);
+		position: static;
+		height: auto;
+	}
+}
 
-.post-nav {
+.post-header > .post-nav {
     display: flex;
+	flex-wrap: wrap;
     flex-direction: row;
-    gap: 2.5rem;
+	justify-content: end;
+	font-size: 1.5rem;
+    gap: 1em;
+	color: $header-fg;
+}
+
+@media screen and (max-width: 100rem) {
+	.post-header > .post-nav {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 80rem) and (max-width: 100rem) {
+	.post-header > .post-nav {
+		flex-direction: column;
+		align-items: end;
+	}
+}
+
+@media screen and (max-width: 50rem) {
+	.post-header > .post-nav {
+		font-size: 1rem;
+	}
+}
+
+.post-header > .post-nav > a {
+	color: $header-fg;
+}
+
+
+
+.post-header > .post-nav > a.backlink {
+	position: relative;
+	font-weight: 700;
+}
+
+.post-header > .post-nav > a.backlink::before {
+	content: "←";
+	position: absolute;
+	right: calc(100% + 1rem);
+	transition: transform 0.2s ease;
+}
+
+.post-header > .post-nav > a.backlink:hover::before {
+	transform: translateX(-1rem);
+	text-decoration: none;
+}
+
+.post-header > .post-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+	max-width: calc(60rem - var(--gutter-size) * 2);
+	justify-self: center;
+}
+
+.post-header > .post-info > img {
+	width: 10rem;
+	height: 10rem;
+	border: calc(10rem * 0.05) solid $main-fg;
+}
+
+@media screen and (max-width: 50rem) {
+	.post-header > .post-info > img {
+		width: 6rem;
+		height: 6rem;
+		border: calc(6rem * 0.05) solid $main-fg;
+	}
+}
+
+.post-header > .post-info > h1 {
+	height: auto;
+    font-size: calc(min(min(2rem, 4vh), 6vw));
+	text-wrap: balance;
 }
 
 /*
-    Post info
+	Main
 */
+main {
+	max-width: 60rem;
+	width: 100%;
+	padding: var(--gutter-size);
+	padding-bottom: 0;
+}
 
-.post-info {
-    color: $sub-fg;
+@media screen and (max-width: 80rem) {
+	main {
+		margin: 0 auto;
+		padding: var(--gutter-size);
+		padding-bottom: 0;
+	}
+}
+
+.post-warning {
+	background-color: $header-bg;
+	background-image: $paper-bg;
+	width: 100%;
+	font-weight: 500;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	color: $header-fg;
 }
 
 /*
@@ -72,11 +217,15 @@ article > *:first-child {
     margin-top: 0;
 }
 
+article > *:last-child {
+    margin-bottom: 0;
+}
+
 article > h1,
 article > h2,
 article > h3,
 article > h4 {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 article ul {
@@ -177,9 +326,18 @@ article blockquote > :last-child::after {
 
 footer {
     font-size: 0.75rem;
-    margin-bottom: 15rem;
+	margin-top: 2rem;
+    margin-bottom: var(--gutter-size);
+	opacity: 0.2;
+	mix-blend-mode: luminosity;
+	transition: opacity 0.1s ease;
 }
 
 footer::after {
     content: "Website theme by Daniel P H Fox.";
+}
+
+footer:hover {
+	opacity: 1;
+	mix-blend-mode: normal;
 }

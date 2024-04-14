@@ -16,19 +16,21 @@
 			This blog supports <a href="/feed.xml">RSS / Atom</a> for your favourite reader.<br>
 			Visit <a href="https://elttob.uk/go/masto">my Mastodon page</a> for my shorter quips.
 		</p>
-		<hr>
 		<ul class="post-gallery">
 			{%- for post in site.posts -%}
+			{%- if post.spicy != true -%}
 			{%- assign thumbnail_index = forloop.index0 | modulo: site.default_thumbnails.size -%}
 			<li class="post-gallery-entry">
 				<a href="{{ post.url }}">
 					<img src="{{ post.image.path }}" alt="{{ post.title }}">
 				</a>
 			</li>
+			{%- endif -%}
 			{%- endfor -%}
 		</ul>
 		<ul class="post-list">
 			{%- for post in site.posts -%}
+			{%- if post.spicy != true -%}
 			{%- assign thumbnail_index = forloop.index0 | modulo: site.default_thumbnails.size -%}
 			<li class="post-list-entry">
 				<a href="{{ post.url }}">
@@ -40,9 +42,9 @@
 					<time datetime="{{ post.date }}">{{ post.date | date: site.date_format }}</time>
 				</a>
 			</li>
+			{%- endif -%}
 			{%- endfor -%}
 		</ul>
-		<hr>
 		{%- include footer.html -%}
 	</main>
 </body>

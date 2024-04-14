@@ -6,6 +6,7 @@ image:
   width: 256
   height: 256
 comments_url: "https://tech.lgbt/@Elttob/111136423517477322"
+spicy: true
 ---
 
 It's been 182 days since I got so pissed off at Elon Musk that I unfollowed

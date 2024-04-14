@@ -1,8 +1,5 @@
 @import "site-common";
 
-$home-header-bg: $neutral-600;
-$home-header-fg: $neutral-200;
-
 :root {
     --home-thumbnail-size: 8rem;
 }
@@ -47,7 +44,7 @@ body {
 		1fr;
 }
 
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 80rem) {
     body {
 		display: grid;
 		--max-width: 100rem;
@@ -75,7 +72,8 @@ main {
 */
 
 main {
-	padding: 1.875rem;
+	padding: var(--gutter-size);
+	padding-bottom: 0;
 }
 
 main > * {
@@ -98,8 +96,8 @@ main > * + * {
 */
 
 .home-header {
-	padding: 4rem;
-	padding-left: calc(max(4rem, var(--left-dead-space) - 10rem));
+	padding: var(--gutter-size);
+	padding-left: calc(max(var(--gutter-size), var(--left-dead-space) - 10rem));
 	padding-top: 0;
 
 	position: sticky;
@@ -114,8 +112,8 @@ main > * + * {
         "h2" auto / 100%;
     row-gap: 2rem;
 
-	color: $home-header-fg;
-	background-color: $home-header-bg;
+	color: $header-fg;
+	background-color: $header-bg;
 	background-image: $paper-bg;
 	overflow-x: hidden;
 }
@@ -129,18 +127,38 @@ main > * + * {
     grid-area: h2;
 }
 
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 80rem) {
     .home-header {
-		padding-left: 4rem;
+		row-gap: 1rem;
 		position: static;
 		height: auto;
 	}
 }
 
-@media screen and (max-width: 50rem) {
+@media screen and (min-width: 30rem) and (max-width: 80rem) {
     .home-header {
-		padding: 2rem;
-		padding-top: 0;
+		grid-template:
+			". img" 1fr
+			"h1 img" auto
+			"h2 img" auto / 1fr 10rem;
+	}
+}
+
+@media screen and (min-width: 20rem) and (max-width: 30rem) {
+    .home-header {
+		grid-template:
+			". img" 1fr
+			"h1 img" auto
+			"h2 h2" auto / 1fr 10rem;
+	}
+}
+
+@media screen and (max-width: 20rem){
+    .home-header {
+		grid-template:
+			"img" 10rem
+			"h1" auto
+			"h2" auto;
 	}
 }
 
@@ -150,7 +168,7 @@ main > * + * {
 
 .home-header > a > img {
     display: block;
-	width: calc(100% + 6rem);
+	width: calc(100% + 4rem);
     height: 100%;
 	object-fit: contain;
 	object-position: top right;
@@ -165,14 +183,30 @@ main > * + * {
 }
 
 .home-header > h1 {
-    font-size: calc(min(min(4rem, 8vh), 12vw));
+    font-size: 4rem;
 }
 
 .home-header > h2 {
-	font-size: calc(min(min(2rem, 4vh), 6vw));
+	font-size: 2rem;
 	font-weight: 400;
 	max-width: 24ch;
 	text-wrap: balance;
+}
+
+@media screen and (max-width: 150rem) {
+    .home-header > h1 {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 80rem) {
+    .home-header > h1 {
+		font-size: 2rem;
+	}
+	
+	.home-header > h2 {
+		font-size: 1.5rem;
+	}
 }
 
 /*
@@ -183,23 +217,29 @@ main > * + * {
     display: flex;
     flex-direction: row;
 	max-width: none;
-	margin-left: -1.875rem;
-	margin-right: -1.875rem;
-	padding-left: 1.875rem;
-	padding-right: 1.875rem;
+	margin-left: calc(-1 * var(--gutter-size));
+	margin-right: calc(-1 * var(--gutter-size));
+	padding-left: calc(1 * var(--gutter-size));
+	padding-right: calc(1 * var(--gutter-size));
 
-	--gallery-thumbnail-size: calc(var(--home-thumbnail-size) / 2);
+	--gallery-thumbnail-size: calc(var(--home-thumbnail-size) * 0.5);
     height: calc(var(--gallery-thumbnail-size) * 1.2);
 	overflow-x: scroll;
 	overflow-y: hidden;
 	scrollbar-width: none;
 }
 
+@media screen and (max-width: 50rem) {
+	.post-gallery {
+		--gallery-thumbnail-size: calc(var(--home-thumbnail-size) * 0.75);
+	}
+}
+
 .post-gallery::-webkit-scrollbar {
 	background: transparent;
 	width: 0;
 	height: 0;
-  }
+}
 
 .post-gallery-entry {
 	display: contents;
@@ -241,7 +281,7 @@ main > * + * {
 .post-list {
     display: flex;
     flex-direction: column;
-    gap: 1.875rem;
+    gap: 1.5rem;
 }
 
 .post-list-entry {
@@ -252,17 +292,16 @@ main > * + * {
         "img blurb" auto
         "img date" auto
         "img ." 1fr / auto 1fr;
-    row-gap: 0.625rem;
-    column-gap: 1.875rem;
+    row-gap: 0.5rem;
+    column-gap: 1.5rem;
 }
 
 @media screen and (max-width: 30rem) {
     .post-list-entry {
         grid-template:
-            "img title" auto
-            "img date" auto
-            "img ." auto
-            "blurb blurb" auto / auto 1fr;
+			"title . img" auto
+            "date . img" auto
+            "blurb blurb blurb" auto / auto 1fr auto;
         column-gap: 1.25rem;
     }
 }
@@ -300,9 +339,18 @@ main > * + * {
 
 footer {
     font-size: 0.75rem;
-    margin-bottom: 15rem;
+	margin-top: 2rem;
+    margin-bottom: var(--gutter-size);
+	opacity: 0.2;
+	mix-blend-mode: luminosity;
+	transition: opacity 0.1s ease;
 }
 
 footer::after {
     content: "Website theme by Daniel P H Fox.";
+}
+
+footer:hover {
+	opacity: 1;
+	mix-blend-mode: normal;
 }

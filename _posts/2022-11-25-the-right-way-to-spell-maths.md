@@ -6,6 +6,7 @@ image:
   width: 256
   height: 256
 comments_url: "https://twitter.com/Elttob_/status/1596138869468332032"
+spicy: true
 ---
 
 I'm not a linguist. I don't care. Someone's always going to call me out on this

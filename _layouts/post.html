@@ -3,35 +3,32 @@ layout: bare
 ---
 <header class="post-header">
   <nav class="post-nav">
-    <a href="{{ site.url }}">{{ site.title }}</a>
+    <a class="backlink" href="{{ site.url }}">{{ site.title }}</a>
     <a href="{{ page.url }}">Permalink</a>
     {%- if page.comments_url -%}
       <a href="{{ page.comments_url }}">Comments</a>
     {%- endif -%}
   </nav>
-  <h1>{{ page.title }}</h1>
+  <section class="post-info">
+  	<img src="{{ page.image.path }}" alt="{{ page.title }}">
+	<h1>{{ page.title }}</h1>
+	<p class="post-date">
+	  Posted on <time datetime="{{ page.date }}">{{ page.date | date: site.date_format }}</time>
+	</p>
+  </section>
 </header>
 
-<hr>
-
 <main>
+  {%- if page.spicy -%}
+  <section class="post-warning">
+	<strong>This post is marked as spicy.</strong> It might be low quality,
+	controversial or reflect opinions that I no longer hold. Spicy posts won't
+	show up on the home page.
+  </section>
+  {%- endif -%}
   <article>
     {{ content }}
   </article>
+  {%- include footer.html -%}
 </main>
 
-<hr>
-
-<p class="post-info">
-  Posted on <time datetime="{{ page.date }}">{{ page.date | date: site.date_format }}</time>
-</p>
-
-<nav class="post-nav">
-  <a href="{{ site.url }}">{{ site.title }}</a>
-  <a href="{{ page.url }}">Permalink</a>
-  {%- if page.comments_url -%}
-    <a href="{{ page.comments_url }}">Comments</a>
-  {%- endif -%}
-</nav>
-
-{%- include footer.html -%}
