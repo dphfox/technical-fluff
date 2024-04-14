@@ -37,14 +37,9 @@ Invalidation cascades *down* the graph. Revalidation cascades *up* the graph. Ea
 
 So, what does this buy us?
 
-### No calculation goes unused
-Because you only calculate what you ask for.
-
-### Batch changes for free
-Because changing multiple things in quick succession only does invalidation. You only ever revalidate once, when you ask for the new value for the first time.
-
-### Topological sort as an inherent property
-Instead of having to implement a dedicated sorting algorithm with confusing heuristics and niche failure cases, the definition of how this system works guarantees that dependencies run before dependents.
+ - **No calculation goes unused** - because you only calculate what you ask for.
+ - **Batch changes for free** - because changing multiple things in quick succession only does invalidation. You only ever revalidate once, when you ask for the new value for the first time.
+ - **Topological sort as an inherent property** - instead of having to implement a dedicated sorting algorithm with confusing heuristics and niche failure cases, the definition of how this system works guarantees that dependencies run before dependents.
 
 ## Is this novel?
 
