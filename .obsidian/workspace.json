@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
+                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
+                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
+                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md"
+                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md"
               }
             }
           }
@@ -148,12 +148,15 @@
   },
   "active": "18eba432d2360d70",
   "lastOpenFiles": [
+    "assets/posts/evolving-fusions-execution-model/thumb.jpg",
+    "assets/posts/evolving-fusions-execution-model",
+    "assets/posts/New folder",
+    "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
+    "_posts/2024-04-14-evolving-fusions-execution-model.md",
     "assets/posts/i-dont-want-to-be-a-maintainer/thumb.jpg",
     "assets/posts/i-dont-want-to-be-a-maintainer/thumb",
     "assets/posts/i-dont-want-to-be-a-maintainer",
-    "assets/posts/New folder",
     "_posts/2024-03-10-musings-on-structural-code-editing.md",
-    "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
     "Untitled.md",
     "assets/posts/musings-on-structural-code-editing/thumb.jpg",
     "assets/posts/musings-on-structural-code-editing/formatting.png",
@@ -170,11 +173,9 @@
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-switch.png",
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-x.png",
     "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-x.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-empty.png",
     "assets/posts/square-checkboxes-a-gen-z-review",
     "assets/posts/ultrawide-fluid-typography/thumb.jpg.0.pdnSave",
     "_posts/2022-11-20-better-volumetric-light-beams.md",
-    "assets/posts/ultrawide-fluid-typography/inter32by9.jpg.0.pdnSave",
     "_posts/2024-01-07-a-reactive-smart-home.md",
     "_posts/2023-11-20-meshy-musings.md",
     "_posts/Untitled.md",
