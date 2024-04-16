@@ -40,6 +40,8 @@ When you're doing *eager* execution, it's really easy to stop updating further o
 
 When a change occurs in a lazy system, you *have* to mark all of the transitive dependencies, because they might have changed. But you don't know if they're *meaningful* changes, because you need to run the computation to unlock that information, and if you run the computation, then this isn't a lazy process anymore. Instead, you'll have to do extra work when you're doing the calculation, at a completely different point in time, and possibly in a different order.
 
+-----
+
 ## Introducing monotonic painting
 
 That's where **monotonic painting** comes in. I developed this algorithm independently, but it bears some resemblance to [other reactive algorithms](https://github.com/modderme123/reactively/blob/main/Reactive-algorithms.md).
