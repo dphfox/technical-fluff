@@ -139,7 +139,7 @@ For completeness, you can also reject invalidations which discover a `busy` pain
 
 With this background, we can now introduce the 'monotonic' element. All that you need for this is a global number that increases every single time an object meaningfully changes. This monotonically increasing number is hereafter referred to as `time`, because it can be used to compare which changes occurred earlier or later than other changes.
 
-Each object in the graph will store the `time` when it last meaningfully changed, so in a fully validated graph, dependencies will always have a smaller `time` than dependents. This fact will become important later.
+Each object in the graph will store the `time` when it last meaningfully changed, so in a freshly validated graph, dependencies will always have a smaller `time` than dependents. This fact will become important later.
 
 <figure>
     <img src="/assets/posts/monotonic-painting/level-3-intro.svg" alt="The original graph, except each dependent object has a greater 'time' associated with it.">
