@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6f4e5e29adf412a3",
+        "id": "295c25441dc57b64",
         "type": "tabs",
         "children": [
           {
-            "id": "18eba432d2360d70",
+            "id": "ecccd8486d8eb6f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
+                "file": "_posts/2024-04-16-monotonic-painting.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
+                "file": "_posts/2024-04-16-monotonic-painting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md",
+                "file": "_posts/2024-04-16-monotonic-painting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-04-14-evolving-fusions-execution-model.md"
+                "file": "_posts/2024-04-16-monotonic-painting.md"
               }
             }
           }
@@ -146,35 +146,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18eba432d2360d70",
+  "active": "ecccd8486d8eb6f3",
   "lastOpenFiles": [
-    "assets/posts/evolving-fusions-execution-model/thumb.jpg",
+    "_site/assets/posts/monotonic-painting/thumb.jpg",
+    "assets/posts/monotonic-painting/thumb.jpg",
+    "_posts/2024-04-16-monotonic-painting.md",
+    "_site/assets/posts/monotonic-painting/level-3-skip.svg",
+    "assets/posts/monotonic-painting/level-3-skip.svg",
+    "_site/assets/posts/monotonic-painting/level-3-complete.svg",
+    "assets/posts/monotonic-painting/level-3-complete.svg",
+    "_site/assets/posts/monotonic-painting/level-3-recurse.svg",
+    "assets/posts/monotonic-painting/level-3-recurse.svg",
+    "_site/assets/posts/monotonic-painting/level-3-dependency.svg",
+    "assets/posts/monotonic-painting/level-3-dependency.svg",
+    "_site/assets/posts/monotonic-painting/level-3-unsure.svg",
+    "_posts/2022-11-07-sets-efficient-topological-search.md",
+    "_site/2024/04/16/monotonic-painting.html",
+    "_site/2024/04/16",
+    "_site/assets/posts/monotonic-painting",
+    "assets/posts/monotonic.md",
+    "_posts/2024-03-10-musings-on-structural-code-editing.md",
+    "_posts/2024-04-14-evolving-fusions-execution-model.md",
     "assets/posts/evolving-fusions-execution-model",
     "assets/posts/New folder",
     "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
-    "_posts/2024-04-14-evolving-fusions-execution-model.md",
-    "assets/posts/i-dont-want-to-be-a-maintainer/thumb.jpg",
     "assets/posts/i-dont-want-to-be-a-maintainer/thumb",
     "assets/posts/i-dont-want-to-be-a-maintainer",
-    "_posts/2024-03-10-musings-on-structural-code-editing.md",
     "Untitled.md",
-    "assets/posts/musings-on-structural-code-editing/thumb.jpg",
-    "assets/posts/musings-on-structural-code-editing/formatting.png",
     "assets/posts/musings-on-structural-code-editing/formatting.png.0.pdnSave",
-    "assets/posts/musings-on-structural-code-editing/beyondvertical.png",
     "assets/posts/musings-on-structural-code-editing/beyondvertical.png.0.pdnSave",
-    "assets/posts/musings-on-structural-code-editing/textlike.png",
     "assets/posts/musings-on-structural-code-editing/textlike.png.0.pdnSave",
-    "assets/posts/musings-on-structural-code-editing",
     "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
     "_posts/2024-01-10-ultrawide-fluid-typography.md",
-    "assets/posts/square-checkboxes-a-gen-z-review/thumb.jpg",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-empty.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-switch.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-round-x.png",
-    "assets/posts/square-checkboxes-a-gen-z-review/checkbox-square-x.png",
-    "assets/posts/square-checkboxes-a-gen-z-review",
-    "assets/posts/ultrawide-fluid-typography/thumb.jpg.0.pdnSave",
     "_posts/2022-11-20-better-volumetric-light-beams.md",
     "_posts/2024-01-07-a-reactive-smart-home.md",
     "_posts/2023-11-20-meshy-musings.md",
