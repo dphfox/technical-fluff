@@ -7,6 +7,8 @@ image:
   height: 256
 ---
 
+**Edited to correct some incorrect deductions around skipping computations.**
+
 Introducing the **monotonic painting** algorithm, a lazy evaluation algorithm that can skip evaluating updates originating from meaningless changes.
 
 ## Context
@@ -183,7 +185,7 @@ This object's next dependency is invalid. Invalid objects don't fit our previous
     <img src="/assets/posts/monotonic-painting/level-3-unsure.svg" alt="The next dependency of the object is invalid, so the time isn't accurate.">
 </figure>
 
-So, the dependency must have its further dependencies visited.
+So, the dependency must be revalidated to know whether it has meaningfully changed or not. Even if one of its own dependencies is meaningfully different, the property doesn't apply transitively.
 
 <figure>
     <img src="/assets/posts/monotonic-painting/level-3-dependency.svg" alt="The dependency is queried and marked as busy.">
@@ -191,17 +193,15 @@ So, the dependency must have its further dependencies visited.
 
 The dependency itself only has one dependency - the object that was invalidated earlier. 
 
-This object will have a newer `time`, which means the dependency - and by extension - the original queried object - has experienced a meaningful change and will have to recompute.
+This object will have a newer `time`, which means the dependency has experienced a meaningful change and will recompute.
 
-We don't have to recompute the dependency right now, because the original object might not choose to depend on this dependency anymore when it recomputes. However, we *are* now aware that it will need to be recomputed for sure if it *is* queried. You should temporarily cache this information so you can skip re-doing these checks in case this dependency is queried during the computation.
-
-Anyway, the original object has the go-ahead to recompute, so it clears its dependencies and runs its computation. It decides to depend on a nearby object, and the usual recursion occurs.
+If the new value is discovered to be meaningfully different, the original object has the go-ahead to recompute. In that case, it clears its dependencies and runs its computation. It decides to depend on a nearby object, and the usual recursion occurs.
 
 <figure>
     <img src="/assets/posts/monotonic-painting/level-3-recurse.svg" alt="A chain of dependencies are queried originating from the bottom object.">
 </figure>
 
-And, as the computations complete, each object is painted as valid. If the change was meaningful, it's also given that monotonically increasing `time`.
+And, as the computations complete, each object is painted as valid. If those changes were meaningful, they're also given that monotonically increasing `time`.
 
 If all of the changes are meaningful, you get the familiar picture:
 
