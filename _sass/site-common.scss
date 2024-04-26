@@ -23,6 +23,9 @@ $font-size-code: 0.9375rem;
 
 $paper-bg: url("/assets/paper.png");
 
+$emboss-strength: 0.3;
+$emboss: 0px 1px 1px rgba(255, 253, 251, $emboss-strength), 0px -1px 1px rgba(69, 54, 47, $emboss-strength / 3 * 2);
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +40,7 @@ body {
     font-family: $font-body;
 
     line-height: 150%;
+	text-shadow: $emboss;
 }
 
 h1, h2, h3, h4 {
