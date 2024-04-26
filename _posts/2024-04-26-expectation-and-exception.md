@@ -67,7 +67,7 @@ However, it's crystal clear that the two pathways target two different audiences
 
 Right now, I implement this system with the technological equivalent of chewing gum and tape. The application to get on the wait list is a humble Google Form, chosen for its easy export to CSV and built-in email association that helps to discourage spam, automation or other simple gaming. It'd be nice to have a more proper way of distributing my wares.
 
-That's where the Creator Store can [c]()ome in. We've already campaigned hard for pay-what-you-want, and I'd bet it's almost certainly on the team's radar by now because of that. However, I think we need to be careful not to paint it as a panacea, but simply one part of a system of expectation management.
+That's where the Creator Store can come in. We've already campaigned hard for pay-what-you-want, and I'd bet it's almost certainly on the team's radar by now because of that. However, I think we need to be careful not to paint it as a panacea, but simply one part of a system of expectation management.
 
 I think the Creator Store team should explore an Access Anywhere-like system too, as something that composes on top of these other approaches to help capture as much value for creators as they deserve. Imagine a world where you can pay the listed price, *or* pay above that if you're especially well-off and want to show your support, ***or*** receive the product for free if you're especially disadvantaged compared to everyone else and need the support of others.
 
