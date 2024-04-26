@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "295c25441dc57b64",
+        "id": "d4a102e79e79072b",
         "type": "tabs",
         "children": [
           {
-            "id": "ecccd8486d8eb6f3",
+            "id": "bc009f5d6c7d7544",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-04-16-monotonic-painting.md",
+                "file": "_posts/2024-04-26-expectation-and-exception.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-04-16-monotonic-painting.md",
+                "file": "_posts/2024-04-26-expectation-and-exception.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-04-16-monotonic-painting.md",
+                "file": "_posts/2024-04-26-expectation-and-exception.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-04-16-monotonic-painting.md"
+                "file": "_posts/2024-04-26-expectation-and-exception.md"
               }
             }
           }
@@ -146,11 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ecccd8486d8eb6f3",
+  "active": "bc009f5d6c7d7544",
   "lastOpenFiles": [
+    "assets/posts/expectation-and-exception/thumb.jpg",
+    "assets/posts/expectation-and-exception",
+    "assets/posts/New folder",
+    "_posts/2024-04-26-expectation-and-exception.md",
+    "_posts/2023-10-17-return-to-office.md",
+    "_posts/2024-04-16-monotonic-painting.md",
     "_site/assets/posts/monotonic-painting/thumb.jpg",
     "assets/posts/monotonic-painting/thumb.jpg",
-    "_posts/2024-04-16-monotonic-painting.md",
     "_site/assets/posts/monotonic-painting/level-3-skip.svg",
     "assets/posts/monotonic-painting/level-3-skip.svg",
     "_site/assets/posts/monotonic-painting/level-3-complete.svg",
@@ -159,7 +164,6 @@
     "assets/posts/monotonic-painting/level-3-recurse.svg",
     "_site/assets/posts/monotonic-painting/level-3-dependency.svg",
     "assets/posts/monotonic-painting/level-3-dependency.svg",
-    "_site/assets/posts/monotonic-painting/level-3-unsure.svg",
     "_posts/2022-11-07-sets-efficient-topological-search.md",
     "_site/2024/04/16/monotonic-painting.html",
     "_site/2024/04/16",
@@ -168,14 +172,12 @@
     "_posts/2024-03-10-musings-on-structural-code-editing.md",
     "_posts/2024-04-14-evolving-fusions-execution-model.md",
     "assets/posts/evolving-fusions-execution-model",
-    "assets/posts/New folder",
     "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md",
     "assets/posts/i-dont-want-to-be-a-maintainer/thumb",
     "assets/posts/i-dont-want-to-be-a-maintainer",
     "Untitled.md",
     "assets/posts/musings-on-structural-code-editing/formatting.png.0.pdnSave",
     "assets/posts/musings-on-structural-code-editing/beyondvertical.png.0.pdnSave",
-    "assets/posts/musings-on-structural-code-editing/textlike.png.0.pdnSave",
     "_posts/2024-01-28-square-checkboxes-a-gen-z-review.md",
     "_posts/2024-01-10-ultrawide-fluid-typography.md",
     "_posts/2022-11-20-better-volumetric-light-beams.md",
@@ -189,7 +191,6 @@
     "_posts/2023-10-03-early-ruminations-on-monorepo-life.md",
     "_posts/2023-10-04-math-round-considered-harmful.md",
     "_posts/2023-11-04-my-next-roblox-game.md",
-    "_posts/2023-10-17-return-to-office.md",
     "_posts/2022-11-05-so-i-have-a-blog-now.md"
   ]
 }
