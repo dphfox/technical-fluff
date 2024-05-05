@@ -249,6 +249,13 @@ article::after {
     height: 1rem;
     background-color: currentColor;
     margin-top: 2.5rem;
+	clear: both;
+}
+
+article br.clearfloat {
+	height: 0;
+	width: 0;
+	clear: both;
 }
 
 article img {
@@ -259,13 +266,47 @@ article img {
 }
 
 article figure {
-    display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
     width: 100%;
 }
 
 article figure img {
     width: 100%;
     max-height: 20rem;
+	margin-left: 0;
+}
+
+@media screen and (min-width: 50rem) {
+	article figure.aside {
+		max-width: 100%;
+		width: auto;
+		float: right;
+		clear: both;
+		margin: 0;
+		margin-left: 1em;
+		margin-bottom: 1em;
+		margin-right: calc(var(--gutter-size)*-1);
+		justify-content: right;
+	}
+
+	article figure.aside img {
+		width: auto;
+		max-width: 40rem;
+	}
+}
+
+@media screen and (min-width: 120rem) {
+	article figure.aside {
+		width: 0;
+		justify-content: left;
+	}
+
+	article figure.aside img {
+		width: max-content;
+		max-width: 40rem;
+	}
 }
 
 article iframe {
