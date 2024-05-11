@@ -5,11 +5,11 @@ image:
   path: /assets/posts/fallibility-lints-in-luau/thumb.jpg
   width: 256
   height: 256
-brief: Because, like those who write it, code is fallible,
+excerpt: Because, like those who write it, code is fallible,
 ---
 Let's play a game of 'spot the error' :)
 
-```Lua
+```lua
 local function performRaycast()
 	local mousePos = UserInputService:GetMouseLocation()
 	local ray = workspace.Camera:ScreenPointToRay(mousePos.X, mousePos.Y)
@@ -21,7 +21,7 @@ Okay, that one was easy. `workspace.Camera` will error if there isn't an instanc
 
 What about this code snippet? Assuming all Luau types are satisfied, will this error?
 
-```Lua
+```lua
 local function generateHueGradient(stops: number): ColorSequence
 	local keypoints = {}
 	for stop = 1, stops do
@@ -37,7 +37,7 @@ Yes, it can! If `stops` is more than `20` or less than `2`, then `ColorSequence.
 
 Okay, what about this code snippet? Same rules as above.
 
-```Lua
+```lua
 local function areEqual(x, y): boolean
 	return x == y
 end
@@ -65,7 +65,7 @@ The idea is simple; declare how 'dangerous' functions are using annotations.
 
 Here's a function that is guaranteed to never throw an error:
 
-```Lua
+```lua
 @errors("never")
 function isPart(x: unknown): boolean
 	return typeof(x) == "Instance" and x:IsA("BasePart")
@@ -74,7 +74,7 @@ end
 
 On the opposite end of things, if you have a function that *unconditionally* fails:
 
-```Lua
+```lua
 @errors("always")
 function logError(message: string)
 	error("[ERROR] " .. message)
@@ -83,7 +83,7 @@ end
 
 If your function is *expected* to fail sometimes as part of normal operation:
 
-```Lua
+```lua
 @errors("expected")
 function getUserProfile(username: string)
 	return HttpService:GetAsync(`{API_ENDPOINT}/users/{username}.json`)
@@ -92,7 +92,7 @@ end
 
 Or, if it is *not* expected to fail as part of normal operation:
 
-```Lua
+```lua
 @errors("unexpected")
 local function getNextUser(userId: string)
 	return tonumber(userId) + 1
@@ -103,7 +103,7 @@ If that looks verbose, don't worry! While we can't solve the halting problem, it
 
 If all code paths of a function call an `@errors("always")` function, then that function itself can be inferred to be `@errors("always")`:
 
-```Lua
+```lua
 -- inferred: @errors("always")
 local function alwaysErrors(condition: boolean)
 	assert(condition, "The condition was false")
@@ -115,7 +115,7 @@ end
 
 If `@errors("never")` are the only functions used, and there's no potentially fallible operations (as evaluated based on the static types of the operands), then the function can be inferred to be `@errors("never")`:
 
-```Lua
+```lua
 -- inferred: @errors("never")
 local function neverErrors(ratio: number): number
 	return 3 * x^2 + 2 * x^3
@@ -126,7 +126,7 @@ And anywhere in-between, you can infer `@errors("expected")` (or `@errors("unexp
 
 So, why is this useful? Because you can now add a different annotation to lint for usage of functions with these error annotations.
 
-```Lua
+```lua
 @should_error("never")
 function getUserProfile(username: string)
 	-- warning: GetAsync is expected to error; handle the expected error with 
@@ -137,7 +137,7 @@ end
 
 And, because you can tune your tolerance level, you can reduce how pedantic the checks are by reducing the level of your annotation:
 
-```Lua
+```lua
 @should_error("never")
 local function areEqual(x, y): boolean
 	-- warning: == with possible metatables can error unexpectedly; handle the 
@@ -161,7 +161,7 @@ When function values are passed around, this causes a few complications with thi
 
 How should `perform` be annotated?
 
-```Lua
+```lua
 @errors("always")
 local function badMath(): number
 	return 2 + nil
@@ -180,7 +180,7 @@ end
 
 The error level of the function can't be resolved until there's an actual function call to analyse:
 
-```Lua
+```lua
 local fine = perform(goodMath) -- inferred: @errors("never")
 local notFine = perform(badMath) -- inferred: @errors("always")
 ```
@@ -194,7 +194,7 @@ If Fusion's update code errors at any point, then the entire application's state
 
 The problem? Well... users can insert their own code directly into this process:
 
-```Lua
+```lua
 local calculation = scope:Computed(
 	function(use)
 		return badMath() -- uh oh
@@ -204,7 +204,7 @@ local calculation = scope:Computed(
 
 Wouldn't it be nice if you could just:
 
-```Lua
+```lua
 local calculation = scope:Computed(
 	@should_error("never") 
 	function(use)
@@ -217,7 +217,7 @@ local calculation = scope:Computed(
 
 Or even better, if the library could annotate the callback for you, automatically letting you know of the constraints the library wants your code to operate under:
 
-```Lua
+```lua
 local calculation = scope:Computed(
 	function(use)
 		-- warning: badMath will always error, handle the error with pcall() or
