@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-05-05-in-love-with-roblox-audio.md",
-                "mode": "source",
-                "source": false
+                "file": "_posts/2024-05-11-fallibility-lints-in-luau.md",
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-05-05-in-love-with-roblox-audio.md",
+                "file": "_posts/2024-05-11-fallibility-lints-in-luau.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-05-05-in-love-with-roblox-audio.md",
+                "file": "_posts/2024-05-11-fallibility-lints-in-luau.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-05-05-in-love-with-roblox-audio.md"
+                "file": "_posts/2024-05-11-fallibility-lints-in-luau.md"
               }
             }
           }
@@ -148,6 +148,11 @@
   },
   "active": "bc009f5d6c7d7544",
   "lastOpenFiles": [
+    "assets/posts/fallibility-lints-in-luau/thumb.jpg",
+    "assets/posts/fallibility-lints-in-luau",
+    "assets/posts/New folder",
+    "_posts/2024-05-05-in-love-with-roblox-audio.md",
+    "_posts/2024-05-11-fallibility-lints-in-luau.md",
     "_site/assets/posts/in-love-with-roblox-audio/listensetup.png",
     "assets/posts/in-love-with-roblox-audio/listensetup.png",
     "assets/posts/in-love-with-roblox-audio/listensetup.png.0.pdnSave",
@@ -160,20 +165,16 @@
     "_site/2024/05/05",
     "_site/2024/05",
     "_posts/2022-11-07-sets-efficient-topological-search.md",
-    "_posts/2024-05-05-in-love-with-roblox-audio.md",
     "assets/posts/in-love-with-roblox-audio/auxsetup.png",
     "assets/posts/in-love-with-roblox-audio/auxsetup.png.0.pdnSave",
     "assets/posts/in-love-with-roblox-audio/speakersys.jpg",
     "assets/posts/in-love-with-roblox-audio/speakersys.jpg.0.pdnSave",
     "_posts/2024-04-26-expectation-and-exception.md",
     "assets/posts/expectation-and-exception/thumb.jpg",
-    "assets/posts/expectation-and-exception",
-    "assets/posts/New folder",
     "_posts/2023-10-17-return-to-office.md",
     "_posts/2024-04-16-monotonic-painting.md",
     "_site/assets/posts/monotonic-painting/thumb.jpg",
     "assets/posts/monotonic-painting/thumb.jpg",
-    "_site/assets/posts/monotonic-painting/level-3-skip.svg",
     "assets/posts/monotonic.md",
     "_posts/2024-03-10-musings-on-structural-code-editing.md",
     "_posts/2024-04-14-evolving-fusions-execution-model.md",
