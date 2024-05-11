@@ -5,7 +5,7 @@ image:
   path: /assets/posts/fallibility-lints-in-luau/thumb.jpg
   width: 256
   height: 256
-excerpt: Because, like those who write it, code is fallible,
+excerpt: Because, like those who write it, code is fallible.
 ---
 Let's play a game of 'spot the error' :)
 
