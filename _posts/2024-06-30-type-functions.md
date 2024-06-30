@@ -33,7 +33,7 @@ Type functions can cast the type of values much like `::` can, except it's stron
 
 In the case of `Child`, it prevents Luau from complaining about a mixed list of values, by forcibly constraining the type to be an array of a union type.
 
-```Lua
+```lua
 -- This snippet throws a type error because Luau infers the list is
 -- {Instance}, when it's actually {Fusion.Child}.
 -- This can't be resolved with :: Child.
@@ -69,7 +69,7 @@ local folder = scope:New "Folder" {
 
 But I've also used it in other places for different reasons. While working on animated icons for the [Elttob Suite](https://suite.elttob.uk/), I used type functions to declare what type I intended to declare, so that I could get useful autocomplete while I was working, and raise type errors as close to the source of the error as possible by communicating more of my intent to Luau. It also makes the code more readable and understandable for someone who is unfamiliar with what data is being represented in the structure.
 
-```Lua
+```lua
 sun = AnimatedIcon {
 	fallbackUrls = {
 		primary = "rbxassetid://15057420815"
