@@ -7,7 +7,9 @@ image:
   height: 256
 ---
 
-I just merged a new feature into Fusion. It implements nothing new at all. It's literally an identity function:
+I just merged a new feature into Fusion. It implements nothing new at all. 
+
+It's literally an identity function:
 
 ```lua
 local function Child(
