@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-07-01-type-functions.md",
+                "file": "_posts/2024-06-30-type-functions.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-07-01-type-functions.md",
+                "file": "_posts/2024-06-30-type-functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-07-01-type-functions.md",
+                "file": "_posts/2024-06-30-type-functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-07-01-type-functions.md"
+                "file": "_posts/2024-06-30-type-functions.md"
               }
             }
           }
@@ -148,11 +148,11 @@
   },
   "active": "bc009f5d6c7d7544",
   "lastOpenFiles": [
+    "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
+    "_posts/2024-06-30-type-functions.md",
     "assets/posts/type-functions/thumb.jpg",
     "assets/posts/type-functions",
     "assets/posts/New folder",
-    "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
-    "_posts/2024-07-01-type-functions.md",
     "assets/posts/the-nasty-surprise-in-reactive-signals/thumb.jpg",
     "assets/posts/the-nasty-surprise-in-reactive-signals",
     "_posts/2024-05-11-fallibility-lints-in-luau.md",
@@ -176,7 +176,6 @@
     "assets/posts/in-love-with-roblox-audio/auxsetup.png",
     "assets/posts/in-love-with-roblox-audio/speakersys.jpg",
     "_posts/2024-04-26-expectation-and-exception.md",
-    "assets/posts/expectation-and-exception/thumb.jpg",
     "_posts/2023-10-17-return-to-office.md",
     "_posts/2024-04-16-monotonic-painting.md",
     "assets/posts/monotonic.md",
