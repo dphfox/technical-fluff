@@ -27,10 +27,10 @@ local outerComputed = scope:Computed(function(use, scope)
 end)
 
 scope:Observer(outerComputed):onBind(function()
-	if peek(outerComputed) == nil then
+	local innerComputed = peek(outerComputed)
+	if innerComputed == nil then
 		print("outerComputed = nil")
 	else
-		local innerComputed = peek(example)
 		if peek(innerComptued) == true then
 			print("innerComputed = true")
 		else
