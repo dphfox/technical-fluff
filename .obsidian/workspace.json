@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-06-30-type-functions.md",
+                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-06-30-type-functions.md",
+                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-06-30-type-functions.md",
+                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-06-30-type-functions.md"
+                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md"
               }
             }
           }
@@ -148,11 +148,15 @@
   },
   "active": "bc009f5d6c7d7544",
   "lastOpenFiles": [
-    "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
+    "assets/posts/glitches-in-dynamic-reactive-graphs/thumb.jpg",
+    "assets/posts/glitches-in-dynamic-reactive-graphs/Board.jpg",
+    "assets/posts/glitches-in-dynamic-reactive-graphs",
+    "assets/posts/New folder",
     "_posts/2024-06-30-type-functions.md",
+    "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
+    "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
     "assets/posts/type-functions/thumb.jpg",
     "assets/posts/type-functions",
-    "assets/posts/New folder",
     "assets/posts/the-nasty-surprise-in-reactive-signals/thumb.jpg",
     "assets/posts/the-nasty-surprise-in-reactive-signals",
     "_posts/2024-05-11-fallibility-lints-in-luau.md",
@@ -171,10 +175,8 @@
     "_site/assets/posts/in-love-with-roblox-audio",
     "_site/2024/05/05/in-love-with-roblox-audio.html",
     "_site/2024/05/05",
-    "_site/2024/05",
     "_posts/2022-11-07-sets-efficient-topological-search.md",
     "assets/posts/in-love-with-roblox-audio/auxsetup.png",
-    "assets/posts/in-love-with-roblox-audio/speakersys.jpg",
     "_posts/2024-04-26-expectation-and-exception.md",
     "_posts/2023-10-17-return-to-office.md",
     "_posts/2024-04-16-monotonic-painting.md",
@@ -191,7 +193,6 @@
     "_posts/Untitled.md",
     "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
     "_posts/2024-01-05-a-toy-multitasking-ux.md",
-    "_posts/2023-08-20-github-reactions-suck.md",
-    "_posts/2023-09-27-how-to-take-your-life-back-from-twitter.md"
+    "_posts/2023-08-20-github-reactions-suck.md"
   ]
 }
