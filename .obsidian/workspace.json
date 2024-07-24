@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md"
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md"
               }
             }
           }
@@ -148,35 +148,38 @@
   },
   "active": "bc009f5d6c7d7544",
   "lastOpenFiles": [
-    "assets/posts/glitches-in-dynamic-reactive-graphs/thumb.jpg",
-    "assets/posts/glitches-in-dynamic-reactive-graphs/Board.jpg",
-    "assets/posts/glitches-in-dynamic-reactive-graphs",
+    "assets/posts/understanding-roblox-typography/betterlucky.png",
+    "assets/posts/understanding-roblox-typography/betterlucky.png.0.pdnSave",
+    "assets/posts/understanding-roblox-typography/size30.png",
+    "assets/posts/understanding-roblox-typography/RobloxScreenShot20240724_022037794.png",
+    "assets/posts/understanding-roblox-typography/sourcesansno.png.0.pdnSave",
+    "assets/posts/understanding-roblox-typography/sourcesansno.png",
+    "assets/posts/understanding-roblox-typography/RobloxScreenShot20240724_015359804.png",
+    "assets/posts/understanding-roblox-typography/notsolucky_bounds.png",
+    "assets/posts/understanding-roblox-typography/RobloxScreenShot20240724_014329781.png",
+    "assets/posts/understanding-roblox-typography/notsolucky.png",
+    "assets/posts/understanding-roblox-typography/RobloxScreenShot20240724_014039252.png",
+    "assets/posts/understanding-roblox-typography/textbounds.png",
+    "assets/posts/understanding-roblox-typography/textbounds.png.0.pdnSave",
+    "_posts/2023-02-24-dynamic-volumetrics-in-roblox.md",
+    "_posts/2024-07-24-understanding-roblox-typography.md",
+    "assets/posts/understanding-roblox-typography/size50.png",
+    "assets/posts/understanding-roblox-typography/thumb.jpg.0.pdnSave",
+    "assets/posts/understanding-roblox-typography",
     "assets/posts/New folder",
-    "_posts/2024-06-30-type-functions.md",
     "_posts/2024-07-14-glitches-in-dynamic-reactive-graphs.md",
+    "_posts/2024-07-21-function-colours-are-nonsense.md",
+    "assets/posts/glitches-in-dynamic-reactive-graphs",
+    "_posts/2024-06-30-type-functions.md",
     "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
-    "assets/posts/type-functions/thumb.jpg",
     "assets/posts/type-functions",
-    "assets/posts/the-nasty-surprise-in-reactive-signals/thumb.jpg",
     "assets/posts/the-nasty-surprise-in-reactive-signals",
     "_posts/2024-05-11-fallibility-lints-in-luau.md",
     "_posts/2024-05-17-magic-is-magic-is-magic.md",
     "_posts/2022-10-06-metatables-suck.md",
-    "assets/posts/fallibility-lints-in-luau/thumb.jpg",
     "assets/posts/fallibility-lints-in-luau",
     "_posts/2024-05-05-in-love-with-roblox-audio.md",
-    "_site/assets/posts/in-love-with-roblox-audio/listensetup.png",
-    "assets/posts/in-love-with-roblox-audio/listensetup.png",
-    "assets/posts/in-love-with-roblox-audio/listensetup.png.0.pdnSave",
-    "assets/posts/in-love-with-roblox-audio/thumb.jpg.0.pdnSave",
-    "_site/assets/posts/in-love-with-roblox-audio/thumb.jpg",
-    "_site/assets/posts/in-love-with-roblox-audio/speakersys.jpg",
-    "_site/assets/posts/in-love-with-roblox-audio/auxsetup.png",
-    "_site/assets/posts/in-love-with-roblox-audio",
-    "_site/2024/05/05/in-love-with-roblox-audio.html",
-    "_site/2024/05/05",
     "_posts/2022-11-07-sets-efficient-topological-search.md",
-    "assets/posts/in-love-with-roblox-audio/auxsetup.png",
     "_posts/2024-04-26-expectation-and-exception.md",
     "_posts/2023-10-17-return-to-office.md",
     "_posts/2024-04-16-monotonic-painting.md",
@@ -190,9 +193,6 @@
     "_posts/2022-11-20-better-volumetric-light-beams.md",
     "_posts/2024-01-07-a-reactive-smart-home.md",
     "_posts/2023-11-20-meshy-musings.md",
-    "_posts/Untitled.md",
-    "_posts/2023-11-27-pluginaction-sucks-and-how-to-improve-it.md",
-    "_posts/2024-01-05-a-toy-multitasking-ux.md",
-    "_posts/2023-08-20-github-reactions-suck.md"
+    "_posts/Untitled.md"
   ]
 }
