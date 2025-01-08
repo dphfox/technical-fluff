@@ -2,7 +2,7 @@
 layout: post
 title: Garbage collected reference counting in Luau
 image:
-  path: /assets/posts/garbage-collected-reference-counting-in-Luau/thumb.jpg
+  path: /assets/posts/garbage-collected-reference-counting-in-luau/thumb.jpg
   width: 256
   height: 256
 ---
