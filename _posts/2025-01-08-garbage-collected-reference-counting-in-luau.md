@@ -50,6 +50,7 @@ local function run_on_gc(
 	local alive_test = setmetatable({object}, {__mode = "v"})
 	task.spawn(function()
 		repeat task.wait(1) until alive_test[1] ~= object
+		callback()
 	end)
 end
 
@@ -89,6 +90,7 @@ local function run_on_gc(
 	local alive_test = setmetatable({object}, {__mode = "v"})
 	task.spawn(function()
 		repeat task.wait(1) until alive_test[1] ~= object
+		callback()
 	end)
 end
 
