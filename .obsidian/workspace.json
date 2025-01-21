@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "2025-01-08-garbage-collected-reference-counting-in-luau"
             }
+          },
+          {
+            "id": "7bbbafc0b6299e63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-01-21-framerate-considered-harmful.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-01-21-framerate-considered-harmful"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,13 +177,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc009f5d6c7d7544",
+  "active": "7bbbafc0b6299e63",
   "lastOpenFiles": [
+    "assets/posts/framerate-considered-harmful/thumb.jpg",
+    "assets/posts/framerate-considered-harmful/thumb.jpg.0.pdnSave",
+    "_posts/2024-12-26-please-no-more-ui-frameworks.md",
+    "_posts/2025-01-21-framerate-considered-harmful.md",
+    "assets/posts/framerate-considered-harmful/frame-budget.png",
+    "assets/posts/framerate-considered-harmful/frame-budget.png.0.pdnSave",
+    "assets/posts/framerate-considered-harmful/New shortcut.lnk",
+    "assets/posts/framerate-considered-harmful",
+    "assets/posts/New folder",
+    "_posts/2025-01-08-garbage-collected-reference-counting-in-luau.md",
     "assets/posts/garbage-collected-reference-counting-in-luau/thumb.jpg",
     "assets/posts/garbage-collected-reference-counting-in-luau",
-    "assets/posts/New folder",
-    "_posts/2024-12-26-please-no-more-ui-frameworks.md",
-    "_posts/2025-01-08-garbage-collected-reference-counting-in-luau.md",
     "assets/posts/please-no-more-ui-frameworks/thumb.jpg",
     "assets/posts/please-no-more-ui-frameworks",
     "_posts/2024-06-30-type-functions.md",
@@ -184,13 +206,7 @@
     "_site/assets/posts/passthrough-isnt-dead/vr-passthrough-diagram.png",
     "_site/assets/posts/passthrough-isnt-dead/vr-diagram.png",
     "_site/assets/posts/passthrough-isnt-dead/vision-os.jpg",
-    "_site/assets/posts/passthrough-isnt-dead/thumb.jpg",
-    "_site/assets/posts/passthrough-isnt-dead/quest-pro.jpg",
     "_site/assets/posts/passthrough-isnt-dead",
-    "_site/2024/11/09/passthrough-isnt-dead.html",
-    "assets/posts/passthrough-will-win/new-ar-glasses.jpg.0.pdnSave",
-    "assets/posts/passthrough-will-win/xreal-ultra.jpg.0.pdnSave",
-    "assets/posts/passthrough-will-win/blurry.jpg.0.pdnSave",
     "_posts/2024-05-05-in-love-with-roblox-audio.md",
     "_posts/2024-04-16-monotonic-painting.md",
     "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
@@ -208,7 +224,6 @@
     "_posts/2024-04-26-expectation-and-exception.md",
     "assets/posts/monotonic.md",
     "_posts/2024-03-10-musings-on-structural-code-editing.md",
-    "_posts/2024-04-14-evolving-fusions-execution-model.md",
-    "_posts/2024-04-10-i-dont-want-to-be-a-maintainer.md"
+    "_posts/2024-04-14-evolving-fusions-execution-model.md"
   ]
 }
