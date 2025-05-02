@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Framerate considered harmful
+title: Towards dedicated Luau development
 image:
   path: /assets/posts/towards-dedicated-luau-development/thumb.jpg
   width: 256
