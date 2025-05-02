@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "2025-01-21-framerate-considered-harmful"
             }
+          },
+          {
+            "id": "00755d877daab679",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-05-02-towards-dedicated-luau-development.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-02-towards-dedicated-luau-development"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -55,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -177,17 +192,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7bbbafc0b6299e63",
+  "active": "00755d877daab679",
   "lastOpenFiles": [
+    "assets/posts/towards-dedicated-luau-development/thumb.jpg",
+    "assets/posts/towards-dedicated-luau-development",
+    "assets/posts/New folder",
+    "_posts/2025-01-21-framerate-considered-harmful.md",
+    "_posts/2025-05-02-towards-dedicated-luau-development.md",
+    "_posts/2025-04-18-no-creation-without-destruction-a-software-philosophy.md",
+    "_posts/2025-04-10-i-will-never-love-luau.md",
+    "Untitled.md",
     "assets/posts/framerate-considered-harmful/thumb.jpg",
     "assets/posts/framerate-considered-harmful/thumb.jpg.0.pdnSave",
     "_posts/2024-12-26-please-no-more-ui-frameworks.md",
-    "_posts/2025-01-21-framerate-considered-harmful.md",
     "assets/posts/framerate-considered-harmful/frame-budget.png",
     "assets/posts/framerate-considered-harmful/frame-budget.png.0.pdnSave",
     "assets/posts/framerate-considered-harmful/New shortcut.lnk",
     "assets/posts/framerate-considered-harmful",
-    "assets/posts/New folder",
     "_posts/2025-01-08-garbage-collected-reference-counting-in-luau.md",
     "assets/posts/garbage-collected-reference-counting-in-luau/thumb.jpg",
     "assets/posts/garbage-collected-reference-counting-in-luau",
@@ -196,7 +217,6 @@
     "_posts/2024-06-30-type-functions.md",
     "_posts/2024-11-08-passthrough-isnt-dead.md",
     "_posts/2024-12-15-principles-of-vanilla-4.md",
-    "Untitled.md",
     "_site/2024/11/08/passthrough-isnt-dead.html",
     "_site/2024/11/08",
     "_site/assets/posts/passthrough-isnt-dead/xreal-underside.jpg",
@@ -205,8 +225,6 @@
     "_site/assets/posts/passthrough-isnt-dead/xreal-air.jpg",
     "_site/assets/posts/passthrough-isnt-dead/vr-passthrough-diagram.png",
     "_site/assets/posts/passthrough-isnt-dead/vr-diagram.png",
-    "_site/assets/posts/passthrough-isnt-dead/vision-os.jpg",
-    "_site/assets/posts/passthrough-isnt-dead",
     "_posts/2024-05-05-in-love-with-roblox-audio.md",
     "_posts/2024-04-16-monotonic-painting.md",
     "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
@@ -221,9 +239,6 @@
     "_posts/2024-05-17-magic-is-magic-is-magic.md",
     "_posts/2022-10-06-metatables-suck.md",
     "_posts/2022-11-07-sets-efficient-topological-search.md",
-    "_posts/2024-04-26-expectation-and-exception.md",
-    "assets/posts/monotonic.md",
-    "_posts/2024-03-10-musings-on-structural-code-editing.md",
-    "_posts/2024-04-14-evolving-fusions-execution-model.md"
+    "_posts/2024-04-26-expectation-and-exception.md"
   ]
 }
