@@ -38,7 +38,7 @@ This will involve opening up most of its products, cancelling in-progress projec
 	- Studio Elttob branding will be removed from the project.
 	- The FusionKit for Roblox project has been cancelled.
 	- Fusion's Roblox APIs will continue to be supported, but will be modularised over time to allow Fusion to be used for general purpose Luau development.
-- **Opened up::** Vanilla 4 for Roblox Studio will be opened up:
+- **Opened up:** Vanilla 4 for Roblox Studio will be opened up:
 	- Vanilla 4 for Roblox Studio will be opened up to the community, but new icons won't be designed.
 	- The Vanilla compiler, previously internal and proprietary, will be open sourced.
 - **Going private:** Vanilla itself will be taken private:
