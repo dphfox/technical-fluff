@@ -43,7 +43,7 @@ This will involve opening up most of its products, cancelling in-progress projec
 	- The Vanilla compiler, previously internal and proprietary, will be open sourced.
 - **Going private:** Vanilla itself will be taken private:
 	- Plans for a commercial Vanilla icon set have been dropped.
-	- The Vanilla icon swill return to being a personal icon set for my own projects.
+	- The Vanilla icons will return to being a personal icon set for my own projects.
 
 ## My new priorities
 
