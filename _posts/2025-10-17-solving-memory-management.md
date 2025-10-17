@@ -102,7 +102,7 @@ However, I still have a few lingering thoughts on my mind that I haven't yet cle
 
 -  I suspect that I shouldn't _fully_ rely on the MMU to reserve gobs of virtual address space. I might implement a hybrid solution that chains _large-enough_ blocks of contiguous space instead (something like 1GB chunks?) which might play better on platforms that don't have as many bits of virtual address space.
 - I'm also not entirely convinced yet that I can escape doing allocator management this way. I'm still thinking about ways of potentially carving up the address space in a way that can be used for allocating arenas of various sizes, just in case. I don't really know.
-- I'm also clear-eyed that people may still want to implement more specialised allocation techniques. My idea is that arena allocators are a perfectly good implicit language features, and that through arena allocation, it should be trivial to manage the lifetime of custom allocators and their reserved memory. So I'm not thinking about them too hard right now.
+- I'm also clear-eyed that people may still want to implement more specialised allocation techniques. My idea is that arena allocators are a perfectly good implicit language feature, and that through arena allocation, it should be trivial to manage the lifetime of custom allocators and their reserved memory. So I'm not thinking about them too hard right now.
 
 Overall though? I might have just _solved memory management_.
 
