@@ -6,7 +6,9 @@ image:
   width: 256
   height: 256
 ---
-I was first introduced to Claude at work (because I work for a Big Tech Company). Originally, I was pretty sceptical of anything to do with AI, and generally leaned negative on it due to ethical and moral concerns around the conduct of the companies involved. To this day, I still have my reservations, though my position on IP law as a whole is relatively conflicted as I'm both opposed to its existence but also opposed to how it's been trampled to hurt artists.
+I was first introduced to Claude at work (because I work for a Big Tech Company). Originally, I was pretty sceptical of anything to do with AI, and generally leaned negative on it due to ethical and moral concerns around the conduct of the companies involved. 
+
+To this day, I still have my reservations, though my position on IP law as a whole is relatively conflicted as I'm both opposed to its existence but also opposed to how it's been trampled to hurt artists.
 
 Anyway, that's a topic for another post. I'm going to need to simmer for longer on that one. 
 
