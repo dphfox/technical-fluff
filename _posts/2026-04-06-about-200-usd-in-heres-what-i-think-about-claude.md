@@ -88,7 +88,7 @@ By the 25th of March, I had my desktop in basic working order and could hit the 
 
 The next day, we together had successfully burned through a massive number of the tasks, and by the end of the day, had recreated the splash screen fully, with some back-and-forth to resolve some of the bugs and edge cases that cropped up. All of our plans were documented in Markdown files and we ticked off each set of steps as we completed them.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-burndown.png]]
+![Migration burndown](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-burndown.png)
 
 For context: this Vulkan transition is a leap I had put off for _months_, not just because I had to move countries, but because it was a mentally tiring / overwhelming task. I knew the _outline_ of what needed to be done. I could do it if I bothered to, but I didn't have the executive function to do it when there was always _something else_ to be thinking about.
 
@@ -114,7 +114,7 @@ So, I dove straight into Claude's main assignment: _building out a new reference
 
 I took a similar approach; asymmetric pair programming with comprehensively planned documents prepared upfront. However, I did something slightly different this time; I _also_ got Claude to do a round of research specifically into 64-trees and fast voxel ray tracing, so that I could come up with a good acceleration structure using them. I specifically asked for evidence to back each technique and approach it researched, which yielded good results out of the gate:
 
-![Render HQ spec](render_hq_spec.png)
+![Render HQ spec](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/render_hq_spec.png)
 
 By April Fool's Day, we had set up a simple ray-traced scene, ready for integrating these ideas into. I didn't have to recall any of my memorised equations or look up the Ray Tracing books online; Claude is one of the best math equation recallers in the world, even if it struggles to actually do the math. (Just like a uni student, one might say...)
 
