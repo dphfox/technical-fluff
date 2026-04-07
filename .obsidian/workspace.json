@@ -15,7 +15,7 @@
               "state": {
                 "file": "_posts/2026-04-06-about-200-usd-in-heres-what-i-think-about-claude.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "2026-04-06-about-200-usd-in-heres-what-i-think-about-claude"
@@ -178,6 +178,9 @@
   },
   "active": "931d9704f2839597",
   "lastOpenFiles": [
+    "assets/posts/flip-caches-and-information-loss/thumb.jpg",
+    "assets/posts/flip-caches-and-information-loss",
+    "_posts/2026-01-07-flip-caches-and-information-loss.md",
     "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/volumetrics.png",
     "_posts/2026-04-06-about-200-usd-in-heres-what-i-think-about-claude.md",
     "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/bloom-exposure.png",
@@ -212,7 +215,6 @@
     "_posts/2024-12-26-please-no-more-ui-frameworks.md",
     "assets/posts/framerate-considered-harmful/frame-budget.png.0.pdnSave",
     "assets/posts/framerate-considered-harmful/New shortcut.lnk",
-    "assets/posts/framerate-considered-harmful",
     "_posts/2024-06-30-type-functions.md",
     "_posts/2024-11-08-passthrough-isnt-dead.md",
     "_posts/2024-12-15-principles-of-vanilla-4.md",
@@ -221,7 +223,6 @@
     "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
     "_posts/2024-07-24-understanding-roblox-typography.md",
     "_posts/2024-11-08-i-refuse-to-be-associated-with-these-people.md",
-    "_posts/2023-09-05-state-of-things-sep-23.md",
-    "_posts/2023-10-17-return-to-office.md"
+    "_posts/2023-09-05-state-of-things-sep-23.md"
   ]
 }

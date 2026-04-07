@@ -23,7 +23,7 @@ I had had enough. WebGPU wasn't going to cut it for me or for this project, so i
 
 To start weaning Cavey off of WebGPU and towards Vulkan, I had built version 3 of Cavey's high-level rendering abstractions to be _completely opaque_. Anything built on this renderer wouldn't know what graphics library it was interfacing with. I had already set up some basic-enough plumbing to get a splash screen rendering under WebGPU, but nothing more:
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/splash-screen.png]]
+![Splash screen](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/splash-screen.png)
 
 Under the hood, the frontend API was simple and declarative; it's a static render-graph-style API, just minimally flexible enough for a renderer that'd be GPU driven. Very much YAGNI-style:
 
@@ -80,11 +80,11 @@ Claude's job here was to write a second _backend_ for this API that would do _ex
 
 It started on the 13th of March with a technical doc, written as a collaboration between myself and Claude on my laptop. I didn't have a working desk setup as I had only just moved across the Atlantic:
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-doc.png]]
+![Migration doc](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-doc.png)
 
 By the 25th of March, I had my desktop in basic working order and could hit the ground running. I put Claude in the driver's seat and paid a finite amount of attention to what it was doing. My job was to specify what Claude should do and to direct high-level design decisions; I wasn't particularly interested in specifics of how Claude chose to set up the device or other minutiae - those aren't the bits worth caring about. Essentially, I was a principal engineer pair programming with a digital intern.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-claude.png]]
+![Migration claude](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/migration-claude.png)
 
 The next day, we together had successfully burned through a massive number of the tasks, and by the end of the day, had recreated the splash screen fully, with some back-and-forth to resolve some of the bugs and edge cases that cropped up. All of our plans were documented in Markdown files and we ticked off each set of steps as we completed them.
 
@@ -114,11 +114,11 @@ So, I dove straight into Claude's main assignment: _building out a new reference
 
 I took a similar approach; asymmetric pair programming with comprehensively planned documents prepared upfront. However, I did something slightly different this time; I _also_ got Claude to do a round of research specifically into 64-trees and fast voxel ray tracing, so that I could come up with a good acceleration structure using them. I specifically asked for evidence to back each technique and approach it researched, which yielded good results out of the gate:
 
-![[render_hq_spec.png]]
+![Render HQ spec](render_hq_spec.png)
 
 By April Fool's Day, we had set up a simple ray-traced scene, ready for integrating these ideas into. I didn't have to recall any of my memorised equations or look up the Ray Tracing books online; Claude is one of the best math equation recallers in the world, even if it struggles to actually do the math. (Just like a uni student, one might say...)
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/ray-traced-scene.png]]
+![Ray traced scene](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/ray-traced-scene.png)
 
 The next day, I had it implement a routine for tracing a single 64-bit 4x4x4 chunk, and then had it extend to a whole contiguous world. At this stage, it was still completely separate from the rest of the game, so this terrain wasn't "real", but it was good enough to test the ray tracing approaches we had co-designed. Performance was great:
 
@@ -148,7 +148,7 @@ Anyhow, with the core ray tracing routine set up, it was time to start decoratin
 
 On the 4th of April, we started experimenting with porting the old renderer's UV mapping code to render albedo colours. There were bumps in the road because Claude hadn't kept track of the different coordinate spaces, so for a while, the UVs were all camera relative:
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/uv-bug.jpg]]
+![UV bug](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/uv-bug.jpg)
 
 The bug was quickly identified and fixed, and not long after, we had incorporated the normal and AO maps alongside albedo to get a more complete-looking scene with very little difficulty.
 
@@ -158,7 +158,7 @@ Next up: going to start setting up a proper tonemapping pipeline and get some an
 
 I also got Claude to port over the "smart bevels" code that would bend the normals of texels that lie along the exposed edges of blocks. This worked flawlessly first try with no planning needed.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/smart-bevels.png]]
+![Smart bevels](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/smart-bevels.png)
 
 From there, I turned my attention to tonemapping. I had Claude do a bunch of research into which swapchain format should be used for HDR, and how to query parameters like peak display brightness. 
 
@@ -178,11 +178,11 @@ The goal then was to implement a Monte Carlo integrator that would sample the wh
 
 I started by getting Claude to implement random hemisphere sampling to capture the effect of sky light, plus a sample towards the sun for clear directional shadows. When discussing the physical correctness of this, Claude was able to justify it as a kind of Next-Event Estimation. At this point, we were firmly leaving the realm of full-framerate rendering and moving towards "interactive offline rendering".
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/simple-rt-sunlight.png]]
+![Simple RT sunlight](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/simple-rt-sunlight.png)
 
 Once combined with a physically based material, this already produced some very pleasant effects; for example, by lowering material roughness, you could get nice wet-looking surfaces with smooth specular effects. Claude handled the microfacet equations here; I asked it to review the old PBR implementation and it pointed out some deficiencies that could then be trivially fixed. The results look good to my eyes, but I didn't inspect quite so carefully.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/shiny-stone.png]]
+![Shiny stone](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/shiny-stone.png)
 
 At this point, I started hitting my stride with Claude, going through the plan and execute loop at great speed (and expense). I regularly hit the daily limit, and just started spending into extra usage to keep the velocity up. I think it's worth talking about what happened there.
 
@@ -196,7 +196,7 @@ What's more, since there's pretty reasonably clear answers on how to build up th
 
 Back to the results. By sampling the block hit by the hemisphere ray for emissive colour and doing a secondary sunlight check, a single bounce of sunlight could be trivially added, which helped to fill in a lot of missing ambient light. Claude did this on my behalf with no trouble.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sun-bounce.png]]
+![Sun bounce](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sun-bounce.png)
 
 I then told Claude to port over the physically-based Hillaire sky model I had previously implemented for the old renderer, but with a twist; it should adjust the constants so that they match the new physically-correct lighting values in this renderer. It got it right on its second try; the first try made the sky a few hundred times too bright, which I had to report to it diligently.
 
@@ -206,15 +206,15 @@ That pixelated sun effect was the result of me and Claude going back-and-forth f
 
 I also briefly mentioned that sunsets were too bright, at which point it was able to immediately identify that the Mie scattering coefficient was too high. With approximately no effort on my part, sunsets immediately skyrocketed in visual quality to now looking the best they ever have. This is code that I will for-sure be reusing for the full-performance renderer.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sunset.png]]
+![Sunset](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sunset.png)
 
 Auto-exposure and physically based bloom were next in line. These required a lot of manual tweaking by myself in order to get right, and will still require yet more tweaking over time. However, Claude was able to get functioning versions of these right off the bat, even if they were not initially tuned well.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/bloom-exposure.png]]
+![Bloom & exposure](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/bloom-exposure.png)
 
 And finally, right as I was approaching my monthly spend limit I had set for this project, I implemented atmospheric fog, which was the icing on the cake. Claude executed on this flawlessly, and I did yet more manual tuning after the fact just to tone down the effect to my liking.
 
-![[/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/volumetrics.png]]
+![Volumetrics](/assets/posts/about-200-usd-in-heres-what-i-think-about-claude/volumetrics.png)
 
 As a small disclaimer; since the purpose of this project was to produce a reference renderer, these last steps (especially volumetrics) really sent the performance over the edge for the Steam Deck. Even my 4090 in my desktop could only muster around 20 frames a second here, so I wouldn't take this as Claude revolutionising real-time graphics or anything. However, for the purposes which I set out to utilise it for, this is now a highly competent and tuned reference renderer which I can use to set up further visual testing.
 
