@@ -1,4 +1,8 @@
 {
   "accentColor": "",
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": "JetBrains Mono",
+  "theme": "system",
+  "showRibbon": false,
+  "showViewHeader": true,
+  "nativeMenus": false
 }
