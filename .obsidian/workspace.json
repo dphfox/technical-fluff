@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d4a102e79e79072b",
+        "id": "92d64c026d799d03",
         "type": "tabs",
         "children": [
           {
-            "id": "a1ff59a6c1dd2af8",
+            "id": "931d9704f2839597",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.08203125
+    "width": 495.5,
+    "collapsed": true
   },
   "right": {
     "id": "8030ee8ebeda8907",
@@ -96,8 +97,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2026-08-01-i-made-my-perfect-ui-library.md",
-                "collapseAll": true,
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -106,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 2024-07-24-understanding-roblox-typography"
             }
           },
           {
@@ -142,13 +143,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2026-08-01-i-made-my-perfect-ui-library.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "file": "_posts/2024-07-24-understanding-roblox-typography.md"
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2024-07-24-understanding-roblox-typography"
             }
           }
         ]
@@ -169,44 +167,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a1ff59a6c1dd2af8",
+  "active": "931d9704f2839597",
   "lastOpenFiles": [
+    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/bloom-exposure.png",
+    "_posts/2026-04-06-about-200-usd-in-heres-what-i-think-about-claude.md",
+    "assets/posts/i-made-my-perfect-ui-library/noon-header.jpg",
+    "assets/posts/i-made-my-perfect-ui-library/morning-header.jpg",
+    "assets/posts/i-made-my-perfect-ui-library/day-header.jpg",
+    "assets/posts/i-made-my-perfect-ui-library/dawn-header.jpg",
+    "assets/posts/i-made-my-perfect-ui-library/clay.jpg",
+    "assets/posts/i-made-my-perfect-ui-library",
+    "_drafts/i-made-my-perfect-ui-library.md",
+    "_drafts",
+    "_posts/2026-04-20-suicide-of-the-author.md",
+    "assets/posts/flip-caches-and-information-loss/thumb.jpg",
+    "assets/posts/flip-caches-and-information-loss",
+    "_posts/2026-01-07-flip-caches-and-information-loss.md",
     "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/volumetrics.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/uv-bug.jpg",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/thumb.jpg",
     "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sunset.png",
     "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/sun-bounce.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/splash-screen.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/smart-bevels.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/simple-rt-sunlight.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/shiny-stone.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/render_hq_spec.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/ray-traced-scene.png",
-    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude",
-    "_posts/2026-04-06-about-200-usd-in-heres-what-i-think-about-claude.md",
-    "_drafts",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.165318.63932a4f190d",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.165318.612174c58297",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.117133.52395d8f8fab",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.117133.fa712ba173b3",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.85289.712267af650f",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.85289.8de328625f91",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.85289.b8649914fd6f",
-    "_posts/2026-08-01-i-made-my-perfect-ui-library.md.tmp.85289.6528f0005815",
-    "().md",
-    "_drafts/i-made-my-perfect-ui-library.md",
-    "_posts/2026-01-07-flip-caches-and-information-loss.md",
-    "_posts/2025-10-17-solving-memory-management.md",
     "_posts/2023-02-24-dynamic-volumetrics-in-roblox.md",
+    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude/uv-bug.jpg.0.pdnSave",
+    "().md",
+    "assets/posts/about-200-usd-in-heres-what-i-think-about-claude",
+    "_posts/2025-10-17-solving-memory-management.md",
+    "assets/posts/solving-memory-management",
+    "assets/posts/New folder",
     "_posts/2025-09-17-why-im-writing-a-programming-language.md",
     "_posts/2025-10-13-isnt-there-someone-you-forgot-to-ask.md",
+    "assets/posts/isnt-there-someone-you-forgot-to-ask",
     "_posts/2025-09-28-no-license.md",
     "_posts/2025-01-21-framerate-considered-harmful.md",
     "_posts/2025-01-08-garbage-collected-reference-counting-in-luau.md",
     "_posts/2025-05-02-towards-dedicated-luau-development.md",
     "_posts/2025-06-03-the-disillusioning-spotlight.md",
+    "assets/posts/towards-dedicated-luau-development",
     "_posts/2025-04-18-no-creation-without-destruction-a-software-philosophy.md",
     "_posts/2025-04-10-i-will-never-love-luau.md",
+    "Untitled.md",
+    "assets/posts/framerate-considered-harmful/thumb.jpg.0.pdnSave",
     "_posts/2024-12-26-please-no-more-ui-frameworks.md",
     "_posts/2024-06-30-type-functions.md",
     "_posts/2024-11-08-passthrough-isnt-dead.md",
@@ -214,8 +213,6 @@
     "_posts/2024-05-05-in-love-with-roblox-audio.md",
     "_posts/2024-04-16-monotonic-painting.md",
     "_posts/2024-06-22-the-nasty-surprise-in-reactive-signals.md",
-    "_posts/2024-07-24-understanding-roblox-typography.md",
-    "_posts/2024-11-08-i-refuse-to-be-associated-with-these-people.md",
-    "_posts/2023-09-05-state-of-things-sep-23.md"
+    "_posts/2024-07-24-understanding-roblox-typography.md"
   ]
 }

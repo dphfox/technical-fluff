@@ -382,7 +382,7 @@ This property makes Perfection code a lot more fearless - instead of being preci
 
 ### The memory tragedy of the commons
 
-Ever since the 90s, computation has outpaced the speed of memory accesses. To smooth over this pressure, modern CPUs tend to have caches that are physically closer to the chip. Any cold memory accesses that miss the cache take on the order of thousands of times longer than a "usual" ALU operation operatind directly on available registers.
+Ever since the 90s, computation has outpaced the speed of memory accesses. To smooth over this pressure, modern CPUs tend to have caches that are physically closer to the chip. Any cold memory accesses that miss the cache take on the order of thousands of times longer than a "usual" ALU operation operating directly on available registers.
 
 Of course, that's a slight simplification - there's actually multiple caches (L1, L2, L3...) at various distances from the chip. Closer caches like L1 are much faster, but also much smaller.
 
@@ -1386,7 +1386,7 @@ fn render_button(
 	mut ctx: UiContext,
 	label: String,
 	on_activate: impl FnOnce()
-) -> (impl Paint, bool) {
+) -> impl Paint {
 	let text = render_text(label);
 	let button_bounds = pad(text.bounds(), 4);
 	
@@ -1444,14 +1444,6 @@ fn render_pause_menu(
 ```
 
 With this change, what a button does always lives with the rest of the button's definition, preserving local reasoning and making code more concise without losing meaning.
-
-### Making input 1:1
-
-Up until this point, we've been treating a button as "was clicked" or "wasn't clicked". The reality, however, is that you can receive _multiple clicks within a single frame_, particularly when implementing things like touch controls which can be high-frequency.
-
-To illustrate this, let's take a look at 
-
-
 ### It's (not) time to act
 
 There's a more subtle timing concern to walk through with our code as-written.
@@ -1686,4 +1678,148 @@ fn render_pause_menu(
 	]
 }
 ```
+
+By definition, this solution works, but maybe we don't feel so good about the idea of everything having to become an action. Perhaps it recalls memories of giant global reducers from some older UI frameworks, which we already know don't work.
+
+But, we arrived here from first principles, so maybe there's something we can learn. Let's continue with this for now, and see if it develops into something more nuanced later, once we've exposed it to the real world.
+
+### Touching on something input-ant
+
+Cavey ships on a Steam Deck, which puts alternative inputs front and centre. We can't assume keyboard and mouse as the "best" input method. For example, someone may want to play Cavey using a _touch screen_.
+
+So, let's consider the case of touch controls, which allow a player without any physical input types to still control the game. We'll focus on a single jump button to keep the code examples short.
+
+When the player pushes the button to jump, we can't set the player's inputs directly in-line - that'd be `&mut GameState` - so we'll turn this state mutation into a queued action.
+
+```rust
+fn render_hud(
+	mut ctx: UiContext,
+	screen_bounds: PxRect,
+	queue_action: impl Fn(Action)
+) -> impl Paint {
+	let jump = render_button(ctx.key("jump"), "Jump", || {
+		queue_action(Action::Jump); // using our new defer vocabulary
+	});
+	let jump = align(pad(jump, 4), screen_bounds, Some(0.5), Some(1));
+	jump
+}
+```
+
+This may raise an eyebrow. This _kind of_ looks like we're dispatching an _input_, right?
+
+Let's talk about that.
+
+Typically, input systems for games map key codes to "semantic" events like Attack, Jump, Walk and Look. Let's take Cavey's input system as a quick example - I won't get _too_ detailed about it, but I'll share some snippets as visual aids instead.
+
+Here are some of Cavey's existing definitions from its existing input system, which separately define the _semantic_ information about an input (what kind of input is it?) and the actual events from the OS that will drive them (what devices write this input?):
+
+```rust
+(
+	// "Attack" is a one-dimensional button-style input ...
+	OutputDescription1D {
+		output_id: output_ids::ATTACK,
+		title: "Attack",
+		constraint: Constraint1D::Button
+	},
+	// ... which is controlled by the left mouse button.
+	Writer1D {
+		input: Input1D::Mouse(MouseButton::Left),
+		mode: WriterMode::Overwrite,
+	}
+),
+
+(
+	// "Walk" is a two-dimensional joystick-style input ...
+	OutputDescription2D {
+		output_id: output_ids::WALK,
+		title: "Walk",
+		constraint: Constraint2D::Joystick
+	},
+	// ... which is controlled by four keys on the keyboard.
+	Writer2D {
+		input: Input2D::Keyboard {
+			up: KeyCode::KeyW,
+			down: KeyCode::KeyS,
+			left: KeyCode::KeyA,
+			right: KeyCode::KeyD
+		},
+		mode: WriterMode::Overwrite
+	}
+),
+```
+
+Cavey even has some more _complex_ input types which accumulate over time with their own internal state, for example, the look direction is stored in the input system so that incoming mouse moves can directly change the camera angle with zero latency.
+
+You could almost think of "Look" like a physical gimbal, which the mouse "pushes around" statefully:
+
+```rust
+(
+	// "Look" is a two-dimensional gimbal-style input ...
+	OutputDescription2D {
+		output_id: output_ids::LOOK,
+		title: "Look",
+		constraint: Constraint2D::Gimbal
+	},
+	// ... which is statefully added to by mouse movements.
+	Writer2D {
+		input: Input2D::Mouse {
+			pixels_per_unit: DVec2::ONE * MOUSE_DPI / 5.0
+		},
+		mode: WriterMode::Delta // not overwriting!
+	}
+),
+```
+
+This solution itself was motivated from first principles: one of Cavey's goals is to support remappable inputs. If you don't like the keys and input styles that were chosen for you, then you should be able to configure them to something else that _does_ work for you. But input handling is complex, so the system grew to capture all that complexity and state management.
+
+As a result, all the game engine has to worry about, is reading off some semantic values without worrying about provenance at all:
+
+```rust
+// Player physics doesn't care about where these come from.
+// The code path continues without branching on device types.
+let walk_input = input_snapshot.states_2d.get(output_ids::WALK);
+let jump_input = input_snapshot.states_1d.get(output_ids::JUMP);
+let crouch_input = input_snapshot.states_1d.get(output_ids::CROUCH);
+
+let forward_vector = flat_forward_vec(yaw);
+let right_vector = flat_right_vec(yaw);
+let walk_vector = right_vector * walk_input.x + forward_vector * walk_input.y;
+
+let perform_jump = *jump_input > 0.5;
+let perform_crouch = *crouch_input > 0.5;
+
+// ... rest of locomotion code ...
+```
+
+Tying this back to our touch controls example, you'd *almost* want to write a definition like this, where you declared that an on-screen button would drive the input:
+
+```rust
+(
+	// "Jump" is a one-dimensional button-style input ...
+	OutputDescription1D {
+		output_id: output_ids::JUMP,
+		title: "Jump",
+		constraint: Constraint1D::Button
+	},
+	// ... which is controlled by creating an on-screen touch control.
+	Writer1D {
+		input: Input1D::OnScreen("Jump"),
+		mode: WriterMode::Overwrite,
+	}
+)
+```
+
+That's _two_ places in our code base that want to care about on-screen controls. The longer you look at them, the more you start to see the similarities emerge:
+
+- *Both* systems, at some times, need to show controls to the user on the screen.
+- *Both* systems listen to incoming OS events to figure out when interactions occur.
+- *Both* systems have complex state interactions that need to be managed.
+- *Both* systems emit a semantic stream of actions to be interpreted by the game engine.
+
+What's more: these systems need to be aware of each other's state. Touch controls need to disappear when you're in a dialog or menu. Drags and joystick inputs need to be redirected when the game world isn't the focus.
+
+So we've established these two systems broadly _do the same thing_, and are _highly coupled_.
+
+Let me plant a thought in your head...
+### Input handling *is* UI
 

@@ -5,5 +5,5 @@
   "settingsPopoutWindow": false,
   "strictLineBreaks": true,
   "propertiesInDocument": "source",
-  "showLineNumber": false
+  "showLineNumber": true
 }
