@@ -1666,7 +1666,7 @@ fn render_pause_menu(
 			set_next_view(Some(Views::Options));
 		}),
 		render_button(ctx.key("quit"), "Quit to desktop", || {
-			queue_action(Action::Exit); // Also no longer immediate.
+			queue_action(Action::TerminateLoop); // Also no longer immediate.
 		})
 	];
 	let buttons = vstack(buttons, 4);
@@ -1839,3 +1839,139 @@ The case for unifying the systems is strengthened by considering the frame loop 
 
 Under all of these constraints, and given the deep inter-relation between the two systems demonstrated by touch controls, gamepad hints and input sinking, it's ultimately far more reasonable to construct them as one unit instead of two.
 
+### Completing the interaction model
+
+Let's use this insight to finish up our input handling. As an easy first win, we can finally codify our understanding of what our pause menu is _actually_ doing in our mental model, and rename our actions:
+
+```rust
+fn render_pause_menu(
+	mut ctx: UiContext,
+	screen_bounds: PxRect,
+	current_view: Option<Views>,
+	set_next_view: impl Fn(Option<Views>),
+	game_state: &GameState,
+	queue_action: impl Fn(Action)
+) -> impl Paint {
+	let buttons = &[
+		render_button(ctx.key("resume"), "Resume the game", || {
+			set_next_view(None);
+			 // Notify the game engine we want to resume gameplay.
+			 // We're now using the game engine's _own_ vocabulary for this.
+			queue_action(Action::Idle(false));
+		}),
+		render_button(ctx.key("achieve"), "View achievements", || {
+			set_next_view(Some(Views::Achievements));
+		}),
+		render_button(ctx.key("options"), "Game options", || {
+			set_next_view(Some(Views::Options));
+		}),
+		render_button(ctx.key("quit"), "Quit to desktop", || {
+			// Same here - now refers to the game, not the loop it controls.
+			queue_action(Action::ExitGame);
+		})
+	];
+	let buttons = vstack(buttons, 4);
+	let buttons = align(buttons, screen_bounds, Some(0.5), Some(0.5));
+	
+	compose! [
+		Quad::solid(screen_bounds, Colour::BLACK.opacity(0.5)),
+		buttons
+	]
+}
+```
+
+Now for our first-person input handling. For keyboard, mouse and gamepad, since we don't need to query a specific spot on the screen, we can actually write the logic directly in our immediate-mode UI code, without having to query a specific hit region at all.
+
+The code can look just as simple as querying inputs every frame, but now with the convenience of being directly gateable based on your UI state and being able to directly render on-screen buttons if necessary. It also plays nicely with our deferral rules, ensuring that input processing never accidentally runs when viewing another UI.
+
+```rust
+fn render_game_ui(
+	mut ctx: UiContext,
+	screen_bounds: PxRect,
+	game_state: &GameState,
+	queue_action: impl Fn(Action)
+) -> impl Paint {
+	let (current_view, set_next_view) = ctx.key("current_view").state(|| None);
+	
+	compose! [
+		// ... rest of render_game_ui function ...
+		
+		// Gate input processing on the UI not showing any other modal.
+		current_view.is_none().then(|| render_inputs(
+			ctx.key("inputs"), 
+			screen_bounds, 
+			game_state, 
+			queue_action
+		))
+	]
+	
+}
+
+// Because it implements Paint, it reserves the right to
+// return any on-screen visual elements that we may want,
+// for example for touch controls.
+fn render_inputs(
+	mut ctx: UiContext,
+	screen_bounds: PxRect,
+	game_state: &GameState,
+	queue_action: impl Fn(Action)
+) -> impl Paint {
+	let mut inputs = InputSnapshot {
+		walk_vector: DVec2::ZERO,
+		pitch_yaw: game_state.local_player.pitch_yaw,
+		jump: 0.0, crouch: 0.0, attack: 0.0, interact: 0.0
+	};
+	
+	// Keyboard presses.
+	if ctx.key_pressed(KeyCode::W) { inputs.walk_vector += DVec2::Y; }
+	if ctx.key_pressed(KeyCode::S) { inputs.walk_vector -= DVec2::Y; }
+	if ctx.key_pressed(KeyCode::A) { inputs.walk_vector -= DVec2::X; }
+	if ctx.key_pressed(KeyCode::D) { inputs.walk_vector += DVec2::X; }
+	if ctx.key_pressed(KeyCode::Space) { inputs.jump += 1.0; }
+	if ctx.key_pressed(KeyCode::LeftShift) { inputs.crouch += 1.0; }
+	
+	// Mouse motion.
+	const PIXELS_PER_RADIAN: f64 = 6000.0;
+	inputs.pitch_yaw += ctx.mouse_motion() / PIXELS_PER_RADIAN;
+	
+	// Mouse clicks processed only when an appropriate device is found.
+	// The system could auto-sink these if they went to a hit region instead.
+	if ctx.mouse_pressed(MouseButton::Left) { inputs.attack += 1.0; }
+	if ctx.mouse_pressed(MouseButton::Right) { inputs.interact += 1.0; }
+	
+	// A few touch controls to show on the screen.
+	let on_screen_controls = {
+		let buttons = &[
+			render_button(ctx.key("touch_attack"), "Attack", || inputs.attack = 1.0),
+			render_button(ctx.key("touch_interact"), "Interact", || inputs.interact = 1.0)
+		];
+		let buttons = hstack(buttons, 4);
+		let buttons = align(pad(buttons, 4), screen_bounds, Some(0.5), Some(1.0));
+		buttons
+	};
+	
+	// ... gamepad, trackpads, VR 6DOF, etc ...
+	
+	// Final normalisations & constraints
+	if inputs.walk_vector.length() > 1.0 {
+		inputs.walk_vector = inputs.walk_vector.normalize();
+	}
+	inputs.pitch_yaw = DVec2::new(
+		inputs.pitch_yaw.y.clamp(-TAU / 4.0, TAU / 4.0),
+		inputs.pitch_yaw.x.rem_euclid(TAU),
+	);
+	inputs.jump = inputs.jump.clamp(0.0, 1.0);
+	inputs.crouch = inputs.crouch.clamp(0.0, 1.0);
+	inputs.attack = inputs.attack.clamp(0.0, 1.0);
+	inputs.interact = inputs.interact.clamp(0.0, 1.0);
+	
+	// Send it to the engine.
+	queue_action(Action::PlayerInputs(inputs));
+	
+	on_screen_controls
+}
+```
+
+With that, we've built a fully-motivated minimal UI interaction stack that covers all the bases needed to build various kinds of game UI for a wide range of input modalities, while avoiding all the common pitfalls, and all without introducing any complex book-keeping, asynchronous primitives, or unwieldy cross-system coupling. 
+
+From here, it's theoretically easy to extend to remappable inputs, or even to unique input devices like analogue keyboard switches, 6DOF tracked VR, or custom driving wheels, joysticks and even MIDI instruments - all with one mental model.
