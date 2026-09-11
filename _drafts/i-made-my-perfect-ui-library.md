@@ -1687,9 +1687,9 @@ But, we arrived here from first principles, so maybe there's something we can le
 
 Cavey ships on a Steam Deck, which puts alternative inputs front and centre. We can't assume keyboard and mouse as the "best" input method. For example, someone may want to play Cavey using a _touch screen_.
 
-So, let's consider the case of touch controls, which allow a player without any physical input types to still control the game. We'll focus on a single jump button to keep the code examples short.
+So, let's consider the case of touch controls, which allow a player without any physical input types to still control the game. We'll focus on a single "attack" button to keep the code examples short.
 
-When the player pushes the button to jump, we can't set the player's inputs directly in-line - that'd be `&mut GameState` - so we'll turn this state mutation into a queued action.
+When the player pushes the button to attack, we can't set the player's inputs directly in-line - that'd be `&mut GameState` - so we'll turn this state mutation into a queued action.
 
 ```rust
 fn render_hud(
@@ -1697,11 +1697,12 @@ fn render_hud(
 	screen_bounds: PxRect,
 	queue_action: impl Fn(Action)
 ) -> impl Paint {
-	let jump = render_button(ctx.key("jump"), "Jump", || {
-		queue_action(Action::Jump); // using our new defer vocabulary
+	let attack = render_button(ctx.key("attack"), "Attack", || {
+		queue_action(Action::Attack); // using our new defer vocabulary
 	});
-	let jump = align(pad(jump, 4), screen_bounds, Some(0.5), Some(1));
-	jump
+	let attack = pad(attack, 4);
+	let attack = align(attack, screen_bounds, Some(0.5), Some(1));
+	attack
 }
 ```
 
@@ -1795,15 +1796,15 @@ Tying this back to our touch controls example, you'd *almost* want to write a de
 
 ```rust
 (
-	// "Jump" is a one-dimensional button-style input ...
+	// "Attack" is a one-dimensional button-style input ...
 	OutputDescription1D {
-		output_id: output_ids::JUMP,
-		title: "Jump",
+		output_id: output_ids::ATTACK,
+		title: "Attack",
 		constraint: Constraint1D::Button
 	},
 	// ... which is controlled by creating an on-screen touch control.
 	Writer1D {
-		input: Input1D::OnScreen("Jump"),
+		input: Input1D::OnScreen("Attack"),
 		mode: WriterMode::Overwrite,
 	}
 )
@@ -1814,12 +1815,27 @@ That's _two_ places in our code base that want to care about on-screen controls.
 - *Both* systems, at some times, need to show controls to the user on the screen.
 - *Both* systems listen to incoming OS events to figure out when interactions occur.
 - *Both* systems have complex state interactions that need to be managed.
-- *Both* systems emit a semantic stream of actions to be interpreted by the game engine.
+- *Both* systems emit a series of actions to be interpreted by the game engine.
 
-What's more: these systems need to be aware of each other's state. Touch controls need to disappear when you're in a dialog or menu. Drags and joystick inputs need to be redirected when the game world isn't the focus.
+What's more: these systems need to be aware of each other's state. Touch controls need to disappear when you're in a dialog or menu. Drags and joystick inputs need to be redirected or have their inputs sunk when the game world isn't the focus. Gamepads need on-screen hints to accurately reflect the face buttons on the controller model being used.
 
 So we've established these two systems broadly _do the same thing_, and are _highly coupled_.
 
 Let me plant a thought in your head...
+
 ### Input handling *is* UI
+
+To justify this, let's dig into the nature of the actions being emitted.
+
+Both systems attempt to be _semantic_ to some degree - we don't want the game engine to care about specific OS events, devices, and such. `Action::Mouse1Clicked` would be bad for obvious reasons; it's not portable to different input modalities like gamepad and makes input remapping much harder.
+
+But what about the grey areas? `Action::OpenSettingsMenu` would be input-agnostic, and it's the sort of thing Redux-style apps encode. But - as we saw with closures before - it doesn't make a lot of architectural sense to export local UI concerns to a global queue just to mutate some local state again. It complicates the control flow of the UI's business logic by splitting it across a boundary. So, we shouldn't be sending these actions over to the game engine side at all.
+
+Instead, **the queue's vocabulary should just be defined by what the game engine needs to know.** The engine has no need for settings menus or scrollbars, but it _does_ have a use for knowing when the player is AFK, or when they're walking and looking around, or when they drop an item on the ground.
+
+This line is exactly the same one most _input handling_ systems draw today. The reason we define verbs like Jump, Attack and Walk is because that's what our character controllers and gameplay systems need to know. What's more, the Redux problem is avoided by ensuring UI concerns are managed _locally_ using our `state()` constructs instead of being carved up across the action boundary.
+
+The case for unifying the systems is strengthened by considering the frame loop as a whole; both input and UI want a low-latency path through simulation/response logic directly into a newly rendered frame. Since they both consume OS events and both emit game engine vocabulary, they are forced to occupy the same region of the frame loop; the game can't simulate or respond without having the completed action queue, and can't render until that simulation or response has completed.
+
+Under all of these constraints, and given the deep inter-relation between the two systems demonstrated by touch controls, gamepad hints and input sinking, it's ultimately far more reasonable to construct them as one unit instead of two.
 
