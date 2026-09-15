@@ -1880,9 +1880,9 @@ fn render_pause_menu(
 }
 ```
 
-Now for our first-person input handling. For keyboard, mouse and gamepad, since we don't need to query a specific spot on the screen, we can actually write the logic directly in our immediate-mode UI code, without having to query a specific hit region at all.
+Now for our first-person input handling. Since we don't need to query a specific spot on the screen for keys, mouse or gamepad inputs, we can use a hit region that has unlimited bounds to capture the inputs we care about.
 
-The code can look just as simple as querying inputs every frame, but now with the convenience of being directly gateable based on your UI state and being able to directly render on-screen buttons if necessary. It also plays nicely with our deferral rules, ensuring that input processing never accidentally runs when viewing another UI.
+Other controls can then be composed on top of this hit region to occlude certain inputs, for example, touch controls can sink presses before they reach our pitch/yaw or attack/interact inputs. 
 
 ```rust
 fn render_game_ui(
@@ -1896,7 +1896,8 @@ fn render_game_ui(
 	compose! [
 		// ... rest of render_game_ui function ...
 		
-		// Gate input processing on the UI not showing any other modal.
+		// Process player inputs / show on-screen controls
+		// only when no other UI is active right now.
 		current_view.is_none().then(|| render_inputs(
 			ctx.key("inputs"), 
 			screen_bounds, 
@@ -1909,7 +1910,7 @@ fn render_game_ui(
 
 // Because it implements Paint, it reserves the right to
 // return any on-screen visual elements that we may want,
-// for example for touch controls.
+// for example touch controls.
 fn render_inputs(
 	mut ctx: UiContext,
 	screen_bounds: PxRect,
@@ -1922,56 +1923,104 @@ fn render_inputs(
 		jump: 0.0, crouch: 0.0, attack: 0.0, interact: 0.0
 	};
 	
-	// Keyboard presses.
-	if ctx.key_pressed(KeyCode::W) { inputs.walk_vector += DVec2::Y; }
-	if ctx.key_pressed(KeyCode::S) { inputs.walk_vector -= DVec2::Y; }
-	if ctx.key_pressed(KeyCode::A) { inputs.walk_vector -= DVec2::X; }
-	if ctx.key_pressed(KeyCode::D) { inputs.walk_vector += DVec2::X; }
-	if ctx.key_pressed(KeyCode::Space) { inputs.jump += 1.0; }
-	if ctx.key_pressed(KeyCode::LeftShift) { inputs.crouch += 1.0; }
+	// Define an input listener which takes up infinite 2D space,
+	// but which still has a "z-index" in our occlusion stack.
+	let hit = hit_region(ctx.key("hit"), PxRect::INF).mouse_locked();
 	
-	// Mouse motion.
+	// Direct inputs for keyboard, taken from the hit region.
+	// Sampled at the frame end as continuous input.
+	if hit.key_is_held(KeyCode::W) { inputs.walk_vector += DVec2::Y; }
+	if hit.key_is_held(KeyCode::S) { inputs.walk_vector -= DVec2::Y; }
+	if hit.key_is_held(KeyCode::A) { inputs.walk_vector -= DVec2::X; }
+	if hit.key_is_held(KeyCode::D) { inputs.walk_vector += DVec2::X; }
+	if hit.key_is_held(KeyCode::LeftShift) { inputs.crouch += 1.0; }
+	
+	// Direct inputs sampled across the whole frame interval,
+	// *not* point sampled at the end.
+	// This ensures presses aren't missed.
+	if hit.key_has_been_held(KeyCode::Space) { inputs.jump += 1.0; }
+	if hit.mouse_has_been_held(MouseButton::Left) { inputs.attack += 1.0; }
+	if hit.mouse_has_been_held(MouseButton::Right) { inputs.interact += 1.0; }
+	
+	// Mouse delta between last render and this render,
+	// which we integrate into pitch_yaw.
 	const PIXELS_PER_RADIAN: f64 = 6000.0;
-	inputs.pitch_yaw += ctx.mouse_motion() / PIXELS_PER_RADIAN;
-	
-	// Mouse clicks processed only when an appropriate device is found.
-	// The system could auto-sink these if they went to a hit region instead.
-	if ctx.mouse_pressed(MouseButton::Left) { inputs.attack += 1.0; }
-	if ctx.mouse_pressed(MouseButton::Right) { inputs.interact += 1.0; }
+	inputs.pitch_yaw += hit.mouse_delta() / PIXELS_PER_RADIAN;
 	
 	// A few touch controls to show on the screen.
+	// These are overlaid on top of `hit` so they take over inputs
+	// on their own part of the screen only.
 	let on_screen_controls = {
-		let buttons = &[
-			render_button(ctx.key("touch_attack"), "Attack", || inputs.attack = 1.0),
-			render_button(ctx.key("touch_interact"), "Interact", || inputs.interact = 1.0)
-		];
-		let buttons = hstack(buttons, 4);
+		// Same as render_button, but fires the callback continuously.
+		// We will revisit this shortly.
+		let attack = render_button_has_been_held(ctx.key("touch_attack"), "Attack", 
+			|| inputs.attack += 1.0
+		);
+		let interact = render_button_has_been_held(ctx.key("touch_interact"), "Interact",
+			|| inputs.interact += 1.0
+		);
+		let buttons = hstack(&[attack, interact], 4); // New operation; vstack, but horizontal
 		let buttons = align(pad(buttons, 4), screen_bounds, Some(0.5), Some(1.0));
 		buttons
 	};
 	
-	// ... gamepad, trackpads, VR 6DOF, etc ...
-	
-	// Final normalisations & constraints
-	if inputs.walk_vector.length() > 1.0 {
-		inputs.walk_vector = inputs.walk_vector.normalize();
-	}
-	inputs.pitch_yaw = DVec2::new(
-		inputs.pitch_yaw.y.clamp(-TAU / 4.0, TAU / 4.0),
-		inputs.pitch_yaw.x.rem_euclid(TAU),
-	);
-	inputs.jump = inputs.jump.clamp(0.0, 1.0);
-	inputs.crouch = inputs.crouch.clamp(0.0, 1.0);
-	inputs.attack = inputs.attack.clamp(0.0, 1.0);
-	inputs.interact = inputs.interact.clamp(0.0, 1.0);
+	// ... gamepad, trackpads, VR 6DOF, normalisation, etc ...
 	
 	// Send it to the engine.
 	queue_action(Action::PlayerInputs(inputs));
 	
-	on_screen_controls
+	// `hit` - our input receiving layer - comes before our
+	// on screen controls, so touch controls sink inputs before
+	// they get to our other controls.
+	compose! [
+		hit,
+		on_screen_controls
+	]
 }
 ```
+
+As you can see, the code can look just as simple as querying inputs every frame, but now with the convenience of being trivially gated by the UI's `current_view` state, and being able to render on-screen buttons in-line with the rest of the input logic: we get exactly our desired "on-screen" declaration in line with our input handling that we previously fantasised about under the old divorced system.  
+
+What's more, these controls are rendered using a variant of our existing `render_button` that fires continuously when held, showing how non-special touch controls are under this system - almost all of the code is shared without ceremony, and we could easily reuse this for a non-touch-control UI that needs similar behaviour.
 
 With that, we've built a fully-motivated minimal UI interaction stack that covers all the bases needed to build various kinds of game UI for a wide range of input modalities, while avoiding all the common pitfalls, and all without introducing any complex book-keeping, asynchronous primitives, or unwieldy cross-system coupling. 
 
 From here, it's theoretically easy to extend to remappable inputs, or even to unique input devices like analogue keyboard switches, 6DOF tracked VR, or custom driving wheels, joysticks and even MIDI instruments - all with one mental model.
+
+All input styles *are* some kind of UI - it's just more visible with some than others.
+
+---
+![Clouds at evening.](/assets/posts/i-made-my-perfect-ui-library/evening-header.jpg)
+## Chapter 4: Ergonomics
+
+### Better parameters for components
+
+Now that we have the bones of our system expressed fully in terms of data, function composition, and simple computations - and a good understanding of the frame loop and our data pipeline as a whole - it's time to evaluate how we can make our constructions more useful. 
+
+We've already introduced some important ones, such as `compose!`, which help make our code more concise. But not all conciseness is positive!
+
+Consider our positional arguments to functions like `render_pause_menu`; while some arguments are clearly typed, others are more ambiguous without their names:
+
+```rust
+fn render_pause_menu(
+	UiContext, 
+	PxRect, 
+	Option<Views>, 
+	impl Fn(Option<Views>), 
+	&GameState,
+	impl Fn(Action)
+) -> impl Paint;
+```
+
+And consider `render_button`, where we had to create variants like `render_button_has_been_held` to specify what kind of callback we wanted:
+
+```rust
+fn render_button(
+	UiContext,
+	impl ToString,
+	impl FnOnce()
+) -> impl Paint;
+```
+
+
+### Widely shared parameters
