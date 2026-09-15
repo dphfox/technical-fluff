@@ -466,13 +466,13 @@ I would hope by this point, I've shown mechanically that the distinction between
 
 But if you remain unconvinced, here are some of the most performance-sensitive production projects which use immediate mode, and experience none of the conjectured issues.
 
-#### [File Pilot](https://filepilot.tech/)
+### [File Pilot](https://filepilot.tech/)
 
 It'd be impossible not to lead with this. Using this file manager myself was a religious experience; I've never used a program so fast that hovering the buttons felt truly connected to my hand as I moved my mouse. It lets you scroll through _your whole C drive_ as if it's nothing.
 
 It's so fast that [an internal Microsoft source claims it's the new benchmark the in-box File Explorer is being measured against.](https://xcancel.com/vkrajacic/status/2048853124211752987) That's a glowing review for a UI that's built with - supposedly - the "slower" option.
 
-#### [Blick](https://blickeditor.com/)
+### [Blick](https://blickeditor.com/)
 
 This one's a new one, demoed at Better Software Conference, but it's staggeringly performant and well-put-together. Funnily enough for this post, it's even got endorsements from both [Casey Muratori](https://xcancel.com/cmuratori/status/2081778849885684020) (who coined imgui) and [Nic Barker](https://xcancel.com/nicbarkeragain/status/2081647191727493523) (who made Clay)!
 
@@ -480,25 +480,25 @@ This one's a new one, demoed at Better Software Conference, but it's staggeringl
 
 Video editors are some of the hardest pieces of software to make truly performant, so the dedication to fluidity is remarkable here. To say it's competitive with Premiere and friends, is to give Premiere way too much credit.
 
-#### [Nomad Sculpt](https://nomadsculpt.com/)
+### [Nomad Sculpt](https://nomadsculpt.com/)
 
 This one's notable because it runs on mobile hardware, which gives us a reference point for a complex bit of kit that's not plugged into a wall. As it turns out; battery drain just isn't a problem if you build it well.
 
 It's listed on [Dear Imgui's list of disclosed users](https://github.com/ocornut/imgui/wiki/Software-using-dear-imgui) and is generally a really cool app. [There's even a web demo if you're curious.](https://nomadsculpt.com/demo/)
 
-#### [Blender](https://www.blender.org/)
+### [Blender](https://www.blender.org/)
 
 Following the same train of thought, Blender has a huge presence in the 3D modelling world too, and it's shown to be perfectly capable even for people just getting into modelling without workstation-level hardware.
 
 In fact, it has a unique blend of immediate mode with damage redrawing, showing that immediate mode can be a perfectly principled solution even if you want to retain final pixels instead of refreshing them 144 times a second. Immediate mode logic can just be about solving lifecycle problems and keeping code simple!
 
-#### [Tracy](https://github.com/wolfpld/tracy)
+### [Tracy](https://github.com/wolfpld/tracy)
 
 Profiles are one of the most data-dense UIs in existence, so it means something that one of the most popular and most performant ones runs on Dear ImGui. It renders timelines with _millions_ of profiling zones at full framerate, completely smoothly. If ever there was proof that "running every frame" can scale incredibly well, well, here you go.
 
 I use Tracy actively in the development of my voxel game [Cavey](https://caveygame.com/) and I have never, _ever_ looked back. It's brilliant and I wouldn't ever skip an opportunity to sing its praises.
 
-#### [RemedyBG](https://remedybg.itch.io/remedybg)
+### [RemedyBG](https://remedybg.itch.io/remedybg)
 
 Staying in the world of high-performance dev tools for a second; this commercial Windows debugger sells itself as a super-fast alternative to more traditional tools like the Visual Studio debugger. It refreshes nearly instantly despite being composed of dense data fields and tons of text to be truncated all the time.
 
