@@ -82,24 +82,26 @@ fn render_button(
 fn render_pause_menu(
 	mut ctx: UiContext,
 	screen_bounds: PxRect,
-	current_view: &mut Option<Views>,
-	game_state: &mut GameState
+	current_view: Option<Views>,
+	set_next_view: impl Fn(Option<Views>),
+	game_state: &GameState,
+	queue_action: impl Fn(Action)
 ) -> impl Paint {
-	// Now, the buttons can be directly composed, and no state
+	// The buttons can be directly composed, and no state
 	// needs to be shuttled around at all.
 	let buttons = &[
 		render_button(ctx.key("resume"), "Resume the game", || {
-			*current_view = None;
-			game_state.paused = false;
+			set_next_view(None);
+			queue_action(Action::Idle(false));
 		}),
 		render_button(ctx.key("achieve"), "View achievements", || {
-			*current_view = Some(Views::Achievements);
+			set_next_view(Some(Views::Achievements));
 		}),
 		render_button(ctx.key("options"), "Game options", || {
-			*current_view = Some(Views::Options);
+			set_next_view(Some(Views::Options));
 		}),
 		render_button(ctx.key("quit"), "Quit to desktop", || {
-			game_state.loop_state = GameLoopState::Exit;
+			queue_action(Action::ExitGame);
 		})
 	];
 	let buttons = vstack(buttons, 4);
