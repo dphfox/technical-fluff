@@ -5,7 +5,7 @@ image:
   path: /assets/posts/i-made-my-perfect-ui-library/thumb.jpg
   width: 256
   height: 256
-  excerpt: Over the next three blog posts, I'm going to explore how I got there, justifying three key pillars.
+excerpt: Over the next three blog posts, I'm going to explore how I got there, justifying three key pillars.
 ---
 
 *This is Chapter 1 of a 3-part blog post series discussing "Perfection", a greenfield UI library I built for personal use.*

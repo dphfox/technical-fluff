@@ -5,7 +5,7 @@ image:
   path: /assets/posts/just-draw-it-you-dont-need-a-box-model/thumb.jpg
   width: 256
   height: 256
-  excerpt: Instead of running away from presentation problems and imposing abstractions, we're going to plow right through the heart of the them, and discover a very useful shape algebra along the way.
+excerpt: Instead of running away from presentation problems and imposing abstractions, we're going to plow right through the heart of the them, and discover a very useful shape algebra along the way.
 ---
 
 *This is Chapter 2 of [a 3-part blog post series](https://fluff.blog/2026/09/13/i-made-my-perfect-ui-library.html) discussing "Perfection", a greenfield UI library I built for personal use.*

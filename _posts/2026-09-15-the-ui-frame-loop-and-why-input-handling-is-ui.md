@@ -5,7 +5,7 @@ image:
   path: /assets/posts/the-ui-frame-loop-and-why-input-handling-is-ui/thumb.jpg
   width: 256
   height: 256
-  excerpt: In this final blog post, we'll round out with a broader understanding of where our UI procedure sits within the wider frame loop, and how it can be extended to handle interactions from the user in order to forward semantic events to the game engine.
+excerpt: In this final blog post, we'll round out with a broader understanding of where our UI procedure sits within the wider frame loop, and how it can be extended to handle interactions from the user in order to forward semantic events to the game engine.
 ---
 
 *This is Chapter 3 of [a 3-part blog post series](https://fluff.blog/2026/09/13/i-made-my-perfect-ui-library.html) discussing "Perfection", a greenfield UI library I built for personal use.*
