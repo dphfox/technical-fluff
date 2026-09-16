@@ -5,9 +5,12 @@ image:
   path: /assets/posts/i-made-my-perfect-ui-library/thumb.jpg
   width: 256
   height: 256
+  excerpt: Over the next three blog posts, I'm going to explore how I got there, justifying three key pillars.
 ---
 
-> This is Chapter 1 of a 3-part blog post series discussing "Perfection", a greenfield UI library I built for personal use.
+*This is Chapter 1 of a 3-part blog post series discussing "Perfection", a greenfield UI library I built for personal use.*
+
+---
 
 For the past decade, I've been fighting against _clever_ UI frameworks. Ones that try and be helpful, provide features and conveniences, build in all the features you need. That is to say, ones that tie your hands behind your back the moment you escape their mental model.
 
