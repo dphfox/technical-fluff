@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ON future technology
+title: On future technology
 image:
   path: /assets/posts/on-future-technology/thumb.jpg
   width: 256
