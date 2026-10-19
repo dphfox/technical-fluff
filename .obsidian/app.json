@@ -6,5 +6,5 @@
   "strictLineBreaks": true,
   "propertiesInDocument": "source",
   "showLineNumber": true,
-  "readableLineLength": false
+  "readableLineLength": true
 }
